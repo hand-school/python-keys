@@ -1,43 +1,55 @@
 # Training
 # TODO: Вычислить сумму двух чисел
 def amount(a, b):
-    pass
+    x = a + b
+    return x
 
 
 # Training
 # TODO: Вычислить разность двух чисел
 def subtraction(a, b):
-    pass
+    return a - b
 
 
 # Training
 # TODO: Вычислить произведение двух чисел
 def multiplication(a, b):
-    pass
+    result = a * b
+    print(result)
+    return result
 
 
 # Training
 # TODO: Вычислить деление двух чисел
 def division(a, b):
-    pass
+    x = a / b
+    print(x)
+    return x
 
 
 # Training
 # TODO: Вычислить остаток от деления двух чисел
 def mod(a, b):
-    pass
+    c = a % b
+    x = int(input("напиши число"))
+    print(c + x)
+    return c
 
 
 # Training
 # TODO: Вычислить целую часть от деления двух чисел
 def integer_part(a, b):
-    pass
+    x = a // b
+
+    return x
 
 
 # Trivial
 # TODO: Вычислить дискриминант квадратного уравнения
 def discriminant(a, b, c):
-    pass
+    x = b ** 2
+    q = a * c
+    return x - 4 * q
 
 
 # Trivial

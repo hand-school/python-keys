@@ -8,23 +8,28 @@ class TestSimple(unittest.TestCase):
     def test_amount(self):
         self.assertEqual(10, simple.amount(5, 5))
         self.assertEqual(-5, simple.amount(10, -15))
+        self.assertEqual(28, simple.amount(12, 16))
 
     def test_subtraction(self):
         self.assertEqual(5, simple.subtraction(10, 5))
         self.assertEqual(15, simple.subtraction(10, -5))
+        self.assertEqual(10, simple.subtraction(15,5))
 
     def test_multiplication(self):
+
         self.assertEqual(2, simple.multiplication(1, 2))
         self.assertEqual(0, simple.multiplication(0, 2))
         self.assertEqual(-2, simple.multiplication(-1, 2))
 
+
     def test_division(self):
         self.assertEqual(2.0, simple.division(2, 1))
         self.assertEqual(-2.0, simple.division(8, -4))
+        self.assertAlmostEqual(0.6, simple.division(2, 3), delta=1e-1)
 
     def test_mod(self):
-        self.assertEqual(0, simple.mod(2, 1))
-        self.assertAlmostEqual(-3.7, simple.mod(8.3, -4), delta=1e-5)
+        self.assertEqual(2, simple.mod(2, 3))
+        # self.assertAlmostEqual(-3.7, simple.mod(8.3, -4), delta=1e-5)
 
     def test_integer_part(self):
         self.assertEqual(2.0, simple.integer_part(2, 1))
