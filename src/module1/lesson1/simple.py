@@ -55,7 +55,9 @@ def discriminant(a, b, c):
 # Trivial
 # TODO: Поиск одного из корней квадратного уравнения
 def sqrt(a, b, c):
-    pass
+    d = discriminant(a, b, c)
+    x = (-b + d ** 0.5) / (2 * a)
+    return x
 
 
 # Trivial
