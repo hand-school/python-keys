@@ -105,15 +105,21 @@ def swap(number):
 # Примечание: для веса, который может поднять 1 человек, завести отдельную переменную
 # Использовтаь операцию приведения типа int()
 def peoples_for_work(weight):
-    pass
+    a = 10
+    b = weight / a
+    b = int(b)
+    return b
+
 
 
 # Trivial
 # На вход поступают два числа в виде строки
 # TODO: Необходимо вывести сумму двух чисел
 def string_amount(a, b):
-    pass
-
+    a = int(a)
+    b = int(b)
+    result = amount(a, b)
+    return result
 
 # Easy
 # TODO: Поменять местами первую и последнюю цифры числа

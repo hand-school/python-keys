@@ -50,8 +50,8 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(13, simple.seconds(0, 0, 13))
 
     def test_peoples_for_work(self):
-        self.assertEqual(20, simple.peoples_for_work(100))
-        self.assertEqual(6, simple.peoples_for_work(33))
+        self.assertEqual(10, simple.peoples_for_work(100))
+        self.assertEqual(3, simple.peoples_for_work(33))
         self.assertEqual(0, simple.peoples_for_work(0))
 
     def test_string_amount(self):
