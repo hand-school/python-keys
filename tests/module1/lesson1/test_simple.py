@@ -44,6 +44,20 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(86400, simple.seconds(24, 0, 0))
         self.assertEqual(13, simple.seconds(0, 0, 13))
 
+    def test_peoples_for_work(self):
+        self.assertEqual(20, simple.peoples_for_work(100))
+        self.assertEqual(6, simple.peoples_for_work(33))
+        self.assertEqual(0, simple.peoples_for_work(0))
+
+    def test_string_amount(self):
+        self.assertEqual(25 , simple.string_amount("13", "12"))
+        self.assertEqual(-1, simple.string_amount("0", "-1"))
+
+    def test_swap(self):
+        self.assertEqual(251 , simple.swap(152))
+        self.assertEqual(1488, simple.swap(8481))
+        self.assertEqual(75678566, simple.swap(65678567))
+
     def test_revert_number(self):
         self.assertEqual(874, simple.revert_number(478))
         self.assertEqual(201, simple.revert_number(102))
