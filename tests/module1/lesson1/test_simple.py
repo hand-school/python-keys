@@ -28,8 +28,8 @@ class TestSimple(unittest.TestCase):
         self.assertAlmostEqual(0.6, simple.division(2, 3), delta=1e-1)
 
     def test_mod(self):
-        self.assertEqual(2, simple.mod(2, 3))
-        # self.assertAlmostEqual(-3.7, simple.mod(8.3, -4), delta=1e-5)
+        self.assertEqual(0, simple.mod(2, 1))
+        self.assertAlmostEqual(-3.7, simple.mod(8.3, -4), delta=1e-5)
 
     def test_integer_part(self):
         self.assertEqual(2.0, simple.integer_part(2, 1))
