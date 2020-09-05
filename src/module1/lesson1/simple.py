@@ -110,7 +110,7 @@ def peoples_for_work(weight):
 
 # Trivial
 # На вход поступают два числа в виде строки
-# TODO: Необходимо вывести число сумму двух чисел
+# TODO: Необходимо вывести сумму двух чисел
 def string_amount(a, b):
     pass
 
