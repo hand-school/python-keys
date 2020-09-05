@@ -70,7 +70,6 @@ def seconds(hours, minutes, seconds):
     return a + b + seconds
 
 
-
 # Trivial
 # Один человек может поднять вес до 10кг
 # TODO: Посчитать количество человек, необходимое для переноски груза
@@ -111,7 +110,6 @@ def peoples_for_work(weight):
     return b
 
 
-
 # Trivial
 # На вход поступают два числа в виде строки
 # TODO: Необходимо вывести сумму двух чисел
@@ -121,16 +119,24 @@ def string_amount(a, b):
     result = amount(a, b)
     return result
 
+
 # Easy
 # TODO: Поменять местами первую и последнюю цифры числа
-def swap(number):
-    pass
+def swap(number):  # 1234
+    a = number % 10  # последнее число = 4
+    b = number // 1000  # первое число = 1
+    c = (number % 1000) // 10  # центральная часть = 23
+    result1 = b + c * 10 + a * 1000
+    result2 = int(str(a) + str(c) + str(b))
+    return result2
 
 
 # Easy
 # Пользователь задает целое трехзначное число (например, 478).
 # TODO: Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
 def revert_number(number):
-    pass
-
-
+    a = number % 10  # 8
+    b = number // 100  # 4
+    c = (number % 100) // 10  # 7
+    result1 = b + c * 10 + a * 100
+    return result1

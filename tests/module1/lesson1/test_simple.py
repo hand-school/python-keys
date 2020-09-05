@@ -59,9 +59,9 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(-1, simple.string_amount("0", "-1"))
 
     def test_swap(self):
-        self.assertEqual(251 , simple.swap(152))
+        self.assertEqual(8521 , simple.swap(1528))
         self.assertEqual(1488, simple.swap(8481))
-        self.assertEqual(75678566, simple.swap(65678567))
+        self.assertEqual(7566, simple.swap(6567))
 
     def test_revert_number(self):
         self.assertEqual(874, simple.revert_number(478))

@@ -1,14 +1,20 @@
 # Trivial
 # TODO: проверить, явялется ли значение в переменной числом (вернуть true/false)
 def is_digit(value):
-    pass
+    if type(value) == int:
+        return True
+    else:
+        return False
 
 
 # Trivial
 # TODO: проверить, явялется ли пароль верным
 # Пароль: simple123456
 def is_password_valid(value):
-    pass
+    if value == "simple123456":
+        return True
+    else:
+        return False
 
 
 # Trivial
@@ -20,7 +26,6 @@ def is_password_valid(value):
 # если все введено вверно - вывести "Успешный вход"
 def sign_in(login, password):
     pass
-
 
 
 # Trivial
