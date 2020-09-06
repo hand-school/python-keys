@@ -10,7 +10,7 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(False, is_digit("sadfds"))
 
     def test_is_password_valid(self):
-        self.assertEqual(True, is_password_valid("123456simple"))
+        self.assertEqual(False, is_password_valid("123456simple"))
         self.assertEqual(True, is_password_valid("simple123456"))
 
     def test_sign_in(self):

@@ -25,7 +25,19 @@ def is_password_valid(value):
 # если введен верный логин, но неверный пароль - вывести "Неверный пароль"
 # если все введено вверно - вывести "Успешный вход"
 def sign_in(login, password):
-    pass
+    c = "Логин неверный"
+    d = "Неверный пароль"
+    e = "Успешный вход"
+    if login != 'login123' :
+        return c
+    elif login == 'login123' and password != "simple123456" :
+        return d
+    else :
+        return e
+
+
+
+
 
 
 # Trivial
