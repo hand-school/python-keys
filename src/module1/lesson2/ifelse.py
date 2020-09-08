@@ -28,16 +28,12 @@ def sign_in(login, password):
     c = "Логин неверный"
     d = "Неверный пароль"
     e = "Успешный вход"
-    if login != 'login123' :
+    if login != 'login123':
         return c
-    elif login == 'login123' and password != "simple123456" :
+    elif login == 'login123' and password != "simple123456":
         return d
-    else :
+    else:
         return e
-
-
-
-
 
 
 # Trivial
@@ -46,7 +42,14 @@ def sign_in(login, password):
 # TODO: вернуть 3, если дробное число
 # TODO: вернуть 4, если bool
 def check_type(value):
-    pass
+    if type(value) == str:
+        return 1
+    if type(value) == int:
+        return 2
+    if type(value) == float:
+        return 3
+    if type(value) == bool:
+        return 4
 
 
 # Trivial
@@ -56,7 +59,12 @@ def check_type(value):
 # Если равны - 0,
 # Если второе больше первого - -1
 def compare(a, b):
-    pass
+    if a > b:
+        return 1
+    if a == b:
+        return 0
+    if a < b:
+        return -1
 
 
 # Easy
@@ -65,11 +73,17 @@ def compare(a, b):
 def age_description(n):
     pass
 
-
 # Easy
 # Треугольник задан длинами своих сторон a, b, c.
 # TODO: Проверить, является ли данный треугольник остроугольным(вернуть 0),
 # TODO: прямоугольным(вернуть 1) или тупоугольным(вернуть 2).
 # Если такой треугольник не существует, вернуть - 1.
 def triangle_kind(a, b, c):
-    pass
+    if c ** 2 > (a ** 2) + (b ** 2):
+        return 1
+    elif c ** 2 < (a ** 2) + (b ** 2):
+        return 0
+    elif ((a ** 2) + (b ** 2)) ** 0.5 == c:
+        return 2
+    elif a > b + c or b > a + c or c > a + b:
+        return -1

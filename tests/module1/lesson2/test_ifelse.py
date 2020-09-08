@@ -39,8 +39,8 @@ class TestTasks(unittest.TestCase):
         self.assertEqual("199 лет", age_description(199))
 
     def test_triangle_kind(self):
-        self.assertEqual(-1, triangle_kind(3.0, 7.5, 4.0))
-        self.assertEqual(1, triangle_kind(5.0, 3.0, 4.0))
+        self.assertEqual(-1, triangle_kind(3.0, 8.0, 4.0))
+        self.assertEqual(1, triangle_kind(3.0, 4.0, 5.0))
         self.assertEqual(2, triangle_kind(4.0, 6.0, 8.0))
         self.assertEqual(0, triangle_kind(1.0, 1.5, 1.5))
 
