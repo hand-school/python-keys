@@ -24,3 +24,21 @@
 # number_int = int(number)
 #
 # number = int(input("Введите число "))
+
+# %
+# a = 1234
+# b = a % 10  # 4
+# c = a % 100  # 34
+# print(b)
+
+# //
+# a = 1234
+# b = a // 10
+# c = a // 1000
+
+# a = 12345
+# second_num = (a // 10) % 10
+# print(second_num)
+#
+# custom_num = (a // 10) % 1000
+# print(custom_num)

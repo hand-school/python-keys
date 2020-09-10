@@ -10,7 +10,7 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(False, is_digit("sadfds"))
 
     def test_is_password_valid(self):
-        self.assertEqual(True, is_password_valid("123456simple"))
+        self.assertEqual(False, is_password_valid("123456simple"))
         self.assertEqual(True, is_password_valid("simple123456"))
 
     def test_sign_in(self):
@@ -38,11 +38,26 @@ class TestTasks(unittest.TestCase):
         self.assertEqual("111 лет", age_description(111))
         self.assertEqual("199 лет", age_description(199))
 
+    def test_maximum(self):
+        self.assertEqual(10, maximum(10, 3, 4)[0])
+        self.assertEqual(10, maximum(1, 1, 1)[0])
+        self.assertEqual(10, maximum(-5, -5, -120)[0])
+
     def test_triangle_kind(self):
         self.assertEqual(-1, triangle_kind(3.0, 7.5, 4.0))
         self.assertEqual(1, triangle_kind(5.0, 3.0, 4.0))
         self.assertEqual(2, triangle_kind(4.0, 6.0, 8.0))
         self.assertEqual(0, triangle_kind(1.0, 1.5, 1.5))
+
+    def test_multi_div(self):
+        pass
+
+    def test_can_move(self):
+        self.assertEqual(True, can_move(1, 1, 1, 8))
+        self.assertEqual(True, can_move(0, 1, 5, 1))
+        self.assertEqual(False, can_move(1, 1, 5, 6))
+        self.assertEqual(False, can_move(5, 5, 4, 4))
+
 
 
 if __name__ == '__main__':
