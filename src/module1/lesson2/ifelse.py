@@ -1,14 +1,20 @@
 # Trivial
 # TODO: проверить, явялется ли значение в переменной числом (вернуть true/false)
 def is_digit(value):
-    return type(value) == type(3)
+    if type(value) == int:
+        return True
+    else:
+        return False
 
 
 # Trivial
 # TODO: проверить, явялется ли пароль верным
 # Пароль: simple123456
 def is_password_valid(value):
-    pass
+    if value == "simple123456":
+        return True
+    else:
+        return False
 
 
 # Trivial
@@ -19,7 +25,15 @@ def is_password_valid(value):
 # если введен верный логин, но неверный пароль - вывести "Неверный пароль"
 # если все введено вверно - вывести "Успешный вход"
 def sign_in(login, password):
-    pass
+    c = "Логин неверный"
+    d = "Неверный пароль"
+    e = "Успешный вход"
+    if login != 'login123':
+        return c
+    elif login == 'login123' and password != "simple123456":
+        return d
+    else:
+        return e
 
 
 # Trivial
@@ -28,7 +42,14 @@ def sign_in(login, password):
 # TODO: вернуть 3, если дробное число
 # TODO: вернуть 4, если bool
 def check_type(value):
-    pass
+    if type(value) == str:
+        return 1
+    if type(value) == int:
+        return 2
+    if type(value) == float:
+        return 3
+    if type(value) == bool:
+        return 4
 
 
 # Trivial
@@ -38,14 +59,27 @@ def check_type(value):
 # Если равны - 0,
 # Если второе больше первого - -1
 def compare(a, b):
-    pass
+    if a > b:
+        return 1
+    if a == b:
+        return 0
+    if a < b:
+        return -1
 
 
 # Easy
 # Мой возраст. Для заданного 0 < n < 200, рассматриваемого каквозраст человека,
 # TODO: Вернуть строку вида: «21 год», «32 года», «12 лет».
 def age_description(n):
-    pass
+    a = " год"
+    b = ' года'
+    c = ' лет'
+    if n == 1 or n % 10 == 1 and 1 < (n % 100) // 10:
+        return str(n) + a
+    elif 2 <= n % 10 <= 4 and (n % 100) // 10 > 1:
+        return str(n) + b
+    else:
+        return str(n) + c
 
 
 # Easy
@@ -53,7 +87,12 @@ def age_description(n):
 # TODO: Вывести через запятую сначала наибольшее число, затем два оставшихся
 # К примеру: return 5, 6, 7
 def maximum(a, b, c):
-    pass
+    if a >= b and a >= c:
+        return a, b, c
+    if b >= a and b >= c:
+        return b, a, c
+    if c >= a and c >= b:
+        return c, a, b
 
 
 # Easy
@@ -62,7 +101,15 @@ def maximum(a, b, c):
 # TODO: прямоугольным(вернуть 1) или тупоугольным(вернуть 2).
 # Если такой треугольник не существует, вернуть - 1.
 def triangle_kind(a, b, c):
-    pass
+    max_value, value1, value2 = maximum(a, b, c)
+    if (max_value ** 2) == (value1 ** 2) + (value2 ** 2):
+        return 1
+    elif max_value ** 2 < (value1 ** 2) + (value2 ** 2):
+        return 0
+    elif max_value ** 2 > (value1 ** 2) + (value2 ** 2):
+        return 2
+    elif value1 > value2 + max_value or value2 > value1 + max_value or max_value > value1 + value2:
+        return -1
 
 
 # Easy
@@ -71,8 +118,14 @@ def triangle_kind(a, b, c):
 # Операция деления производится с проверкой:
 # при попытке деления на 0 выводится ошибка.
 # ТЕСТЫ НАПИСАТЬ САМОСТОЯТЕЛЬНО
-def multi_div(a, b):
-    pass
+def multi_div(a, b, operation):
+    if operation == "*":
+        return a * b
+    elif operation == "/":
+        if b == 0:
+            return "усос"
+        else:
+            return a / b
 
 
 # Medium
@@ -85,7 +138,12 @@ def multi_div(a, b):
 # если из первой клетки ходом ладьи можно попасть во вторую,
 # иначе — False.
 def can_move(start_x, start_y, end_x, end_y):
-    pass
+    if start_x == end_x and start_y != end_y:
+        return True
+    elif start_x != end_x and start_y == end_y:
+        return True
+    else:
+        return False
 
 
 # Medium
