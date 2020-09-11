@@ -7,3 +7,19 @@
 # "Объем параллелепипеда: <V>"
 # Примечание: необязательно оформлять решение как функцию
 
+a = input()
+b = input()
+h = input()
+
+if type(a) != int or type(b) != int or type(h) != int:
+    print("Данные не корректны")
+else:
+    a = int(a)
+    b = int(b)
+    h = int(h)
+
+    if a < 0 or b < 0 or h < 0:
+        print("Данные не корректын")
+    else:
+        V = a *  b * h
+        print("Объем параллелепипеда: " + str(V))

@@ -40,8 +40,8 @@ class TestTasks(unittest.TestCase):
 
     def test_maximum(self):
         self.assertEqual(10, maximum(10, 3, 4)[0])
-        self.assertEqual(10, maximum(1, 1, 1)[0])
-        self.assertEqual(10, maximum(-5, -5, -120)[0])
+        self.assertEqual(1, maximum(1, 1, 1)[0])
+        self.assertEqual(-120, maximum(-5, -5, -120)[0])
 
     def test_triangle_kind(self):
         self.assertEqual(-1, triangle_kind(3.0, 7.5, 4.0))
@@ -54,9 +54,15 @@ class TestTasks(unittest.TestCase):
 
     def test_can_move(self):
         self.assertEqual(True, can_move(1, 1, 1, 8))
-        self.assertEqual(True, can_move(0, 1, 5, 1))
+        self.assertEqual(True, can_move(2, 1, 5, 1))
         self.assertEqual(False, can_move(1, 1, 5, 6))
         self.assertEqual(False, can_move(5, 5, 4, 4))
+
+    def test_table_colors(self):
+        self.assertEqual(True, table_colors(1, 1, 1, 1))
+        self.assertEqual(True, table_colors(1, 1, 8, 8))
+        self.assertEqual(True, table_colors(4, 4, 7, 5))
+        self.assertEqual(False, table_colors(2, 3, 8, 8))
 
 
 

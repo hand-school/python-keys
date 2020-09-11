@@ -60,3 +60,31 @@
 # else:
 #     print("Такой цвет нам неизвестен")
 # print("Программа окончена")
+
+
+# and (логическое И) or (логическое ИЛИ) not (отрицание)
+
+# print(1 and 0)
+# print(0 and 0)
+# print(0 and 1)
+# print(1 and 1)
+
+# print(1 or 0)
+# print(0 or 0)
+# print(0 or 1)
+# print(1 or 1)
+
+# print(not True)
+# print(not False)
+
+
+# def maximum(a, b, c):
+#     if a >= b and a >= c:
+#         return a
+#     elif b >= a and b >= c:
+#         return b
+#     else:
+#         return c
+#
+# print(maximum(100, 20, 14))
+
