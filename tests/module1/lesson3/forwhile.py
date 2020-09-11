@@ -38,3 +38,7 @@ class TestTasks(unittest.TestCase):
 
     def test_revert_for(self):
         pass  # TODO: тесты написать самому
+
+    def test_compute(self):
+        self.assertEqual(30, compute(4))
+        self.assertEqual(1, compute(1))
