@@ -1,7 +1,12 @@
 # Training
 # TODO: Написать счетчик используя цикл while
 def counter(start, step, steps):
-    pass
+    a = steps
+    b = start
+    while a > 0:
+        a = a - 1
+        b = b + step
+    return b
 
 
 # Training
@@ -25,7 +30,10 @@ def revert(string):
 # Training
 # TODO: Написать счетчик используя цикл for
 def counter_for(start, step, end):
-    pass
+    a = start
+    for i in range(0, end):
+        a = a + step
+    return a
 
 
 # Training
