@@ -94,7 +94,7 @@
 # word = "Hello world"
 # for i in range(0, len(word)):  # i от 0 до len(word) - 1
 #     print(word[i])  # печатаем символ строки word по индексу i
-
+#
 # for char in word:
 #     print(char)
 
