@@ -12,19 +12,37 @@ def counter(start, step, steps):
 # Training
 # TODO: Найти количество цифр в данном числе используя цикл while
 def num_count(number):
-    pass
+    a = 1
+    while number // 10 > 0:
+        a += 1
+        number //= 10
+    return a
+
 
 
 # Training
 # TODO: Найти количество символов в строе используя цикл while
 def custom_len(number):
-    pass
+    a = len(number) - 1
+    c = 0
+    while a > -1:
+        c += 1
+        a -= 1
+    return c
+
 
 
 # Training
 # TODO: развернуть строчку используя цикл while
 def revert(string):
-    pass
+    rev = ''
+    c = len(string) - 1
+    while c > -1:
+        rev += string[c]
+        c -= 1
+    return rev
+
+
 
 
 # Training
@@ -39,7 +57,8 @@ def counter_for(start, step, end):
 # Training
 # TODO: Найти количество цифр в данном числе используя цикл for
 def num_count_for(number):
-    pass
+    a = number[0:]
+    for i in range()
 
 
 # Training
