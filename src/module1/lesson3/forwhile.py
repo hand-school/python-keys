@@ -57,20 +57,30 @@ def counter_for(start, step, end):
 # Training
 # TODO: Найти количество цифр в данном числе используя цикл for
 def num_count_for(number):
-    a = number[0:]
-    for i in range()
+    a = len(str(number))
+    b = 0
+    for i in range(a, ):
+        b += 1
+    return b
+
 
 
 # Training
 # TODO: Найти количество символов в строе используя цикл for
 def custom_len_for(number):
-    pass
+    a = 0
+    for i in range(len(number, )):
+        a += 1
+    return a
 
 
 # Training
 # TODO: развернуть строчку используя цикл for
 def revert_for(string):
-    pass
+    a = ''
+    for i in range(len(string) - 1, -1, -1):
+        a += string[i]
+    return a
 
 
 # Easy
@@ -78,4 +88,8 @@ def revert_for(string):
 # Используя цикл for, напиши программу, которая посчитает квадраты всех чисел
 # начиная с 1 и до введённого включительно и выведет на экран их сумму.
 def compute(n):
-    pass
+    a = 0
+    for i in range(1, n+1):
+        i **= 2
+        a += i
+    return a

@@ -37,7 +37,7 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(7, custom_len_for("1212123"))
 
     def test_revert_for(self):
-        pass  # TODO: тесты написать самому
+        self.assertEqual('hui', revert_for('iuh'))
 
     def test_compute(self):
         self.assertEqual(30, compute(4))
