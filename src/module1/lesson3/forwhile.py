@@ -19,7 +19,6 @@ def num_count(number):
     return a
 
 
-
 # Training
 # TODO: Найти количество символов в строе используя цикл while
 def custom_len(number):
@@ -31,7 +30,6 @@ def custom_len(number):
     return c
 
 
-
 # Training
 # TODO: развернуть строчку используя цикл while
 def revert(string):
@@ -41,8 +39,6 @@ def revert(string):
         rev += string[c]
         c -= 1
     return rev
-
-
 
 
 # Training
@@ -59,17 +55,16 @@ def counter_for(start, step, end):
 def num_count_for(number):
     a = len(str(number))
     b = 0
-    for i in range(a, ):
+    for i in range(0, a):
         b += 1
     return b
-
 
 
 # Training
 # TODO: Найти количество символов в строе используя цикл for
 def custom_len_for(number):
     a = 0
-    for i in range(len(number, )):
+    for i in range(len(number)):
         a += 1
     return a
 
@@ -89,7 +84,6 @@ def revert_for(string):
 # начиная с 1 и до введённого включительно и выведет на экран их сумму.
 def compute(n):
     a = 0
-    for i in range(1, n+1):
-        i **= 2
-        a += i
+    for i in range(1, n + 1):
+        a += i ** 2
     return a
