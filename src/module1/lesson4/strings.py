@@ -1,21 +1,23 @@
 # Training
 # TODO: найти длину слова
 def use_len(string):
-    pass
+    return len(string)
 
 
 # Training
 # TODO: Функция получает на вход слово и выводит его первый и последний символ через “-”.
 # Пример: "Привет" -> "П-т"
 def cut_word(string):
-    pass
+    return string[0] + '-' + string[len(string) - 1]
 
 
 # Training
 # TODO: Найти первое вхождения символа symbol в сообщение sms справа и слева
 # Результат вывести через запятую
 def r_l_find(sms, symbol):
-    pass
+    a = sms.find(symbol)
+    b = sms.rfind(symbol)
+    return a, b
 
 
 # Training
@@ -27,7 +29,7 @@ def replace_chars(string, old_symbol, new_symbol):
 # Training
 # TODO:
 def count_chars(sms, symbol):
-    pass
+    return sms.count(symbol)
 
 
 # Easy
