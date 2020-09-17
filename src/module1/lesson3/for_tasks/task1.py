@@ -9,5 +9,3 @@ for i in b:
     if len(i) < len_short:
         len_short = len(i)
         short_word = i
-
-print(short_word, len_short)
