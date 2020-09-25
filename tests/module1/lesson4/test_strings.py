@@ -24,4 +24,6 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(2, count_chars("Hello world", "o"))
 
     def test_second_symbol(self):
-        pass
+        self.assertEqual(-2, second_symbol('Issue', 'z'))
+        self.assertEqual(-1, second_symbol('Issue', 'u'))
+        self.assertEqual(2, second_symbol('Issue', 's'))

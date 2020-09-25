@@ -23,7 +23,7 @@ def r_l_find(sms, symbol):
 # Training
 # TODO: заменить в строке string символы old_symbol на new_symbol
 def replace_chars(string, old_symbol, new_symbol):
-    pass
+    return string.replace(old_symbol, new_symbol)
 
 
 # Training
@@ -39,4 +39,15 @@ def count_chars(sms, symbol):
 # программа должна вернуть -1, а если ни одного — вернуть -2.
 # ТЕСТЫ НАПИСАТЬ САМОСТОЯТЕЛЬНО
 def second_symbol(word, symbol):
-    pass
+    counter = word.count(symbol)
+    if counter == 1:
+        return -1
+    if counter == 0:
+        return -2
+    find1 = word.find(symbol)
+    print(find1)
+    slice1 = word[find1 + 1:]
+    print(slice1)
+    find2 = slice1.find(symbol)
+    print(find2)
+    return find2 + find1 + 1
