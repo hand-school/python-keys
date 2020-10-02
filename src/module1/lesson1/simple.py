@@ -2,6 +2,7 @@
 # TODO: Вычислить сумму двух чисел
 def amount(a, b):
     return a+b
+    return a+b
 
 
 # Training
