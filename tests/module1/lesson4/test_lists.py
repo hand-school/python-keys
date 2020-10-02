@@ -35,11 +35,11 @@ class TestTasks(unittest.TestCase):
         self.assertEqual([], common_part_of_lists([], []))
 
     def test_uncommon_part_of_lists(self):
-        self.assertEqual(
-            [-11, -5, 0, 11, 123, 324, 331, 5, 456, 1024, 23],
-            common_part_of_lists(
+        expected = [-11, -5, 0, 11, 123, 324, 331, 1024, 23]
+        actual = uncommon_part_of_lists(
                 [1, 2, 3, 4, 5, 11, 123, 324, 456],
                 [-11, -5, 0, 1, 2, 3, 4, 5, 331, 456, 1024, 23]
             )
-        )
+        for element in expected:
+            self.assertTrue(element in actual, 'Expected ' + str(expected) + '   Actual ' + str(actual))
         self.assertEqual([], uncommon_part_of_lists([], []))
