@@ -44,7 +44,7 @@
 # =========== СТРОКИ ===============
 # string = "Hello"
 # print(string[0])
-#
+# #
 # print(len(string))
 #
 # char_index = 0

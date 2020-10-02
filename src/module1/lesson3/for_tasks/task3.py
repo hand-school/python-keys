@@ -9,5 +9,12 @@
 # Напиши программу, которая подсчитает и выведет на экран
 # количество цифр 5 в введённом списке. Если их нет, программа должна вывести -1.
 
-list_of_num = list(map(int, input().split(" ")))
-
+list_of_num = list(map(int, input('Введите числа').split(" ")))
+num = 0
+for i in list_of_num:
+    if i == 5:
+        num += 1
+if num == 0:
+    print(-1)
+else:
+    print(num)

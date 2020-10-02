@@ -36,9 +36,7 @@ if count_sym == 0:
 elif count_sym == 1:
     print(-1)
 else:
-    counter = 0
-    for i in range(0, len(word)):
-        if word[i] == sym:
-            counter += 1
-            if counter == 2:
-                print(i)
+    result = finder(word, sym, 2)
+    print(result)
+
+

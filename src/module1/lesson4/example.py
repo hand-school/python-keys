@@ -87,12 +87,12 @@
 # list_to_str_3 = "---".join(list(map(str, l1)))
 # print(list_to_str_3)
 
-string_to_list = ("hello " * 10).strip()
-print(string_to_list)
-new_list = string_to_list.split(" ")
-print(new_list)
-
-string_to_list_2 = "hello_hello_hello_hello_hello hello hello hello hello hello"
-new_list_2 = string_to_list_2.split("_")
-print(new_list_2)
+# string_to_list = ("hello " * 10).strip()
+# print(string_to_list)
+# new_list = string_to_list.split(" ")
+# print(new_list)
+#
+# string_to_list_2 = "hello_hello_hello_hello_hello hello hello hello hello hello"
+# new_list_2 = string_to_list_2.split("_")
+# print(new_list_2)
 
