@@ -1,7 +1,7 @@
 # Training
 # TODO: Вычислить сумму двух чисел
 def amount(a, b):
-    pass
+    return a + b
 
 
 # Training
