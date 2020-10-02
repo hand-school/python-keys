@@ -7,4 +7,12 @@
 # от этого символа и до конца.
 a = input('Введите строку')
 b = input('Введите символ')
-list1 = a.split()
+left_index = a.find(b)
+right_index = a.rfind(b)
+
+if left_index == right_index:
+    print(a[:left_index])
+else:
+    left_slice = a[:left_index]
+    right_slice = a[right_index + 1:]
+    print(left_slice + ' - ' + right_slice)

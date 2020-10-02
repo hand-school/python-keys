@@ -3,8 +3,5 @@
 # которая выведет все её символы,
 # с их порядковыми номерами.
 string = input('Введите строку')
-list1 = string.split()
-for i in range(0, len(list1)):
-    print(list1[i])
-    i += 1
-    print(i)
+for i in range(0, len(string)):
+    print(string[i] + ' - ' + str(i))
