@@ -37,9 +37,25 @@ class TestTasks(unittest.TestCase):
     def test_uncommon_part_of_lists(self):
         expected = [-11, -5, 0, 11, 123, 324, 331, 1024, 23]
         actual = uncommon_part_of_lists(
-                [1, 2, 3, 4, 5, 11, 123, 324, 456],
-                [-11, -5, 0, 1, 2, 3, 4, 5, 331, 456, 1024, 23]
-            )
+            [1, 2, 3, 4, 5, 11, 123, 324, 456],
+            [-11, -5, 0, 1, 2, 3, 4, 5, 331, 456, 1024, 23]
+        )
         for element in expected:
             self.assertTrue(element in actual, 'Expected ' + str(expected) + '   Actual ' + str(actual))
         self.assertEqual([], uncommon_part_of_lists([], []))
+
+    def test_rebase(self):
+        self.assertEqual(
+            [['Ivan', 'Ivanov', '5'], ['Petr', 'Petrov', '3'], ['Jeff', 'Downing', '10'], ['Petr', 'Ivanov', '7'],
+             ['John', 'Smith', '7'], ['John', 'Ivanov', '6']],
+            rebase(
+                ['Ivan Ivanov 5', 'Petr Petrov 3', 'Jeff Downing 10', 'Petr Ivanov 7', 'John Smith 7', 'John Ivanov 6']
+            ))
+
+    def test_get_names(self):
+        self.assertEqual(
+            ['Ivan', 'Petr', 'Jeff', 'Petr', 'John', 'John'],
+            get_names(
+                [['Ivan', 'Ivanov', '5'], ['Petr', 'Petrov', '3'], ['Jeff', 'Downing', '10'], ['Petr', 'Ivanov', '7'],
+                 ['John', 'Smith', '7'], ['John', 'Ivanov', '6']])
+        )
