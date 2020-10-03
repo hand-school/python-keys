@@ -27,3 +27,17 @@
 # while 2 < count <= 16:
 #     count = count - 1
 #     print(count)
+
+
+number = input('Введите номер через пробел!')
+number = number.replace(' ', '')
+if len(number) != 11 or number[0] == '0' or number[1] == '0' or number[4] == '0' or not number.isdigit():
+    print(0)
+else:
+    print('+{}({}){}-{}-{}'.format(
+        number[0],  # 7
+        number[1:4],  # 800
+        number[4:7],  # 123
+        number[7:9],  # 45
+        number[9:11],  # 67
+    ))
