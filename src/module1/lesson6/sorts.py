@@ -11,7 +11,7 @@ def bubble_sort(list1):
 
 # Medium
 # Реализовать сортировку выбором
-def choose_sort(list1):
+def selection_sort(list1):
     pass
 
 
