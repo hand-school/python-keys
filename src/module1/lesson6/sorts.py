@@ -1,7 +1,12 @@
 # Medium
 # Реализовать сортировку пузырьком
 def bubble_sort(list1):
-    pass
+    for j in range(0, len(list1) - 1):
+        for i in range(0, len(list1) - 1 - j):
+            if list1[i] > list1[i + 1]:
+                list1[i], list1[i + 1] = list1[i + 1], list1[i]
+    return list1
+
 
 
 # Medium
