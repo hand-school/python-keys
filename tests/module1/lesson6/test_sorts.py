@@ -7,8 +7,8 @@ class TestTasks(unittest.TestCase):
     def test_bubble_sort(self):
         self.assertEqual([1, 2, 3, 4, 5, 100], bubble_sort([100, 2, 4, 5, 3, 1]))
 
-    def test_choose_sort(self):
-        self.assertEqual([1, 2, 3, 4, 5, 100], choose_sort([100, 2, 4, 5, 3, 1]))
+    def test_selection_sort(self):
+        self.assertEqual([1, 2, 3, 4, 5, 100], selection_sort([100, 2, 4, 5, 3, 1]))
 
     def test_insert_sort(self):
         self.assertEqual([1, 2, 3, 4, 5, 100], insert_sort([100, 2, 4, 5, 3, 1]))
