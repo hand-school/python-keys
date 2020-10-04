@@ -120,7 +120,9 @@ def uncommon_part_of_lists(list1, list2):
 # В список с элементами:
 # [['Ivan', 'Ivanov', '5'], ['Petr', 'Petrov', '3'], ['Jeff', 'Downing', '10'], ['Petr', 'Ivanov', '7'], ['John', 'Smith', '7'], ['John', 'Ivanov', '6']]
 def rebase(list1):
-    pass
+    list2 = [elem.split() for elem in list1]
+    return list2
+
 
 
 # Training
@@ -129,4 +131,6 @@ def rebase(list1):
 # В список имен
 # ['Ivan', 'Petr', 'Jeff', 'Petr', 'John', 'John']
 def get_names(list1):
-    pass
+    list2 = [elem[0] for elem in list1]
+    print([int(elem[2]) for elem in list1])
+    return list2

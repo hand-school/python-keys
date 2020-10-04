@@ -3,19 +3,28 @@
 # Программа должна возвращать по названию страны ее столицу.
 # Должны присутствовать страны: Россия, Украина и США
 def country_capital(country_name):
-    pass
+    d = {
+        "Россия": "Москва",
+        "Украина": "Киев",
+        "США": "Вашингтон",
+    }
+    return d[country_name]
 
 
 # Training
 # Создайте пустое множество и добавьте в него элемент value
 def add_to_set(value):
-    pass
+    s1 = set()
+    s1.add(value)
+    return s1
 
 
 # Training
 # Создайте пустой словарь и добавьте в него элемент value по ключу key
 def add_to_dict(key, value):
-    pass
+    dict1 = {}
+    dict1[key] = value
+    return dict1
 
 
 # Easy
