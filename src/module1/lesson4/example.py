@@ -96,3 +96,7 @@
 # new_list_2 = string_to_list_2.split("_")
 # print(new_list_2)
 
+
+# list_of_string = input().split()
+# list_of = [element[0] for element in list_of_string]
+# print(list_of)
