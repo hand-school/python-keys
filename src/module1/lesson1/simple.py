@@ -7,50 +7,58 @@ def amount(a, b):
 # Training
 # TODO: Вычислить разность двух чисел
 def subtraction(a, b):
-    pass
+    c = a - b
+    return c
 
 
 # Training
 # TODO: Вычислить произведение двух чисел
 def multiplication(a, b):
-    pass
+    c = a*b
+    return c
 
 
 # Training
 # TODO: Вычислить деление двух чисел
 def division(a, b):
-    pass
+    c = a/b
+    return c
 
 
 # Training
 # TODO: Вычислить остаток от деления двух чисел
 def mod(a, b):
-    pass
+    c = a % b
+    return c
 
 
 # Training
 # TODO: Вычислить целую часть от деления двух чисел
 def integer_part(a, b):
-    pass
+    c = a // b
+    return c
 
 
 # Trivial
 # TODO: Вычислить дискриминант квадратного уравнения
 def discriminant(a, b, c):
-    pass
+    c = b**2 - (4*a*c)
+    return c
 
 
 # Trivial
 # TODO: Поиск одного из корней квадратного уравнения
 def sqrt(a, b, c):
-    pass
-
+    c = (-b + (discriminant(a, b, c))**1/2)/2*a
+    return c
 
 # Trivial
 # Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
 # TODO: Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
 def seconds(hours, minutes, seconds):
-    pass
+    return (hours *3600) + (minutes *60) + (seconds)
+
+
 
 
 # Trivial
@@ -59,7 +67,7 @@ def seconds(hours, minutes, seconds):
 # Примечание: для веса, который может поднять 1 человек, завести отдельную переменную
 # Использовтаь операцию приведения типа int()
 def peoples_for_work(weight):
-    pass
+
 
 
 # Trivial
