@@ -59,9 +59,9 @@ def seconds(hours, minutes, seconds):
 # Примечание: для веса, который может поднять 1 человек, завести отдельную переменную
 # Использовтаь операцию приведения типа int()
 def peoples_for_work(weight):
-
-    return
-
+    weight_for_one_people = 10
+    people= int(weight / weight_for_one_people)
+    return people
 
 # Trivial
 # На вход поступают два числа в виде строки
