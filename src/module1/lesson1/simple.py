@@ -7,50 +7,61 @@ def amount(a, b):
 # Training
 # TODO: Вычислить разность двух чисел
 def subtraction(a, b):
-    pass
+    return a - b
 
 
 # Training
 # TODO: Вычислить произведение двух чисел
 def multiplication(a, b):
-    pass
+    z = a * b
+    return z
 
 
 # Training
 # TODO: Вычислить деление двух чисел
 def division(a, b):
-    pass
+    k = a // b
+    return k
 
 
 # Training
 # TODO: Вычислить остаток от деления двух чисел
 def mod(a, b):
-    pass
+    h = a % b
+    return h
 
 
 # Training
 # TODO: Вычислить целую часть от деления двух чисел
 def integer_part(a, b):
-    pass
+    g = a // b
+    return g
 
 
 # Trivial
 # TODO: Вычислить дискриминант квадратного уравнения
 def discriminant(a, b, c):
-    pass
+    d = b**2 - 4 * a * c
+    return d
 
 
 # Trivial
 # TODO: Поиск одного из корней квадратного уравнения
 def sqrt(a, b, c):
-    pass
+    d = discriminant(a, b, c)
+    x = (-b + d**1/2) / (2 * a)
+    return x
 
 
 # Trivial
 # Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
 # TODO: Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
 def seconds(hours, minutes, seconds):
-    pass
+    h = hours * 3600
+    m = minutes * 60
+    time = h + m + seconds
+
+    return time
 
 
 # Trivial
@@ -59,14 +70,17 @@ def seconds(hours, minutes, seconds):
 # Примечание: для веса, который может поднять 1 человек, завести отдельную переменную
 # Использовтаь операцию приведения типа int()
 def peoples_for_work(weight):
-    pass
+    ves = 10
+    chel = int(weight // 10)
+    return chel
 
 
 # Trivial
 # На вход поступают два числа в виде строки
 # TODO: Необходимо вывести сумму двух чисел
 def string_amount(a, b):
-    pass
+    z = int(a) + int(b)
+    return z
 
 
 # Easy
