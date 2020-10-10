@@ -60,30 +60,31 @@ def seconds(hours, minutes, seconds):
 # Использовтаь операцию приведения типа int()
 def peoples_for_work(weight):
     weight_for_one_people = 10
-    people= int(weight / weight_for_one_people)
+    people = int(weight / weight_for_one_people)
     return people
 
 # Trivial
 # На вход поступают два числа в виде строки
 # TODO: Необходимо вывести сумму двух чисел
 def string_amount(a, b):
-    return int(a+b)
+    return int(a) + int(b)
 
 
 # Easy
 # TODO: Поменять местами первую и последнюю цифры четырехзначного числа
 def swap(number):
-    pass
+    return (number % 10) * 1000 + (((number // 10) // 10) % 10) * 100 + ((number // 10) % 10) * 10 + (number // 1000)
 
 
 # Easy
 # TODO: Вывести следущее четное число
 def next_int(number):
-    pass
+    if number % 2 == 0:
+        return number + 2
 
 
 # Easy
 # Пользователь задает целое трехзначное число (например, 478).
 # TODO: Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
 def revert_number(number):
-    pass
+    return (number % 10) * 100 + ((number // 10) % 10) * 10 + (number // 100)

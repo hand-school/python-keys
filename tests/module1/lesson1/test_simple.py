@@ -53,10 +53,10 @@ class TestSimple(unittest.TestCase):
         self.assertEqual(25, string_amount("13", "12"))
         self.assertEqual(-1, string_amount("0", "-1"))
 
-    def test_swap(self):#исправить
-        self.assertEqual(251, swap(152))
+    def test_swap(self):
+        self.assertEqual(2512, swap(2512))
         self.assertEqual(1488, swap(8481))
-        self.assertEqual(75678566, swap(65678567))
+        self.assertEqual(7568, swap(8567))
 
     def test_next_int(self):
         self.assertEqual(12, next_int(10))
