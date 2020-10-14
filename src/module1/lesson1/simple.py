@@ -67,30 +67,42 @@ def seconds(hours, minutes, seconds):
 # Примечание: для веса, который может поднять 1 человек, завести отдельную переменную
 # Использовтаь операцию приведения типа int()
 def peoples_for_work(weight):
-
+    a = 10
+    return(int(weight/a))
 
 
 # Trivial
 # На вход поступают два числа в виде строки
 # TODO: Необходимо вывести сумму двух чисел
 def string_amount(a, b):
-    pass
+    return(int(a)+int(b))
+
+
 
 
 # Easy
 # TODO: Поменять местами первую и последнюю цифры четырехзначного числа
 def swap(number):
-    pass
+    a = str(number % 10)
+    b = str(number // 1000)
+    c = str(number % 1000 // 10)
+    res = int(a+c+b)
+    return res
+
 
 
 # Easy
 # TODO: Вывести следущее четное число
 def next_int(number):
-    pass
+    return((number //2)*2+2)
 
 
 # Easy
 # Пользователь задает целое трехзначное число (например, 478).
 # TODO: Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
 def revert_number(number):
-    pass
+    a = str(number % 10)
+    b = str(number // 100)
+    c = str(number % 100 // 10)
+    res_numb = int(a + c + b)
+    return res_numb
