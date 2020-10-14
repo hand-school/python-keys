@@ -16,6 +16,7 @@ print(li1)
 dig_min = li1[0]
 dig_max = li1[0]
 for i in li1:
+    print(i)
     if dig_min < i:
         dig_min = i
     elif dig_max > i:
