@@ -3,7 +3,13 @@
 # К примеру: Ivan Ivanov Olegovich
 # Вернуть строку формата: "Привет, Ivan Olegovich! Твоя фамилия Ivanov?
 def parse_fio(input_data):
-    pass
+    input_data = input_data.split(' ')
+    # return 'Привет, {} {}! Твоя фамилия {}?'.format(input_data[0], input_data[2], input_data[1])
+    return 'Привет, {name} {father_name}! Твоя фамилия {last_name}?'.format(
+        name=input_data[0],
+        father_name=input_data[2],
+        last_name=input_data[1]
+    )
 
 
 # Easy

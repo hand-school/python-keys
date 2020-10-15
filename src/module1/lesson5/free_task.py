@@ -14,3 +14,20 @@
 #
 # Программа должна возвращать размер введенного человека.
 # Если такого человека нет в словаре, то выводить "Человек не найден".
+
+
+quantity = int(input('Кол-во волонтеров'))
+
+list1 = {}
+for _ in range(0, quantity):
+    name = input('Введите имя')
+    size = input('Введите размер')
+    list1[name] = size
+print(list1)
+name = input('Введите имя')
+if name not in list1:
+    print('Человек не найден')
+else:
+    print(name, '->', list1[name])
+
+
