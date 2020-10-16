@@ -55,3 +55,21 @@ def common_part_of_lists(list1, list2):
 # Примечание:  списки заиание отсортированы по возрастанию
 def uncommon_part_of_lists(list1, list2):
     pass
+
+
+# Training
+# Преобразовать исходный список
+# ['Ivan Ivanov 5', 'Petr Petrov 3', 'Jeff Downing 10', 'Petr Ivanov 7', 'John Smith 7', 'John Ivanov 6']
+# В список с элементами:
+# [['Ivan', 'Ivanov', '5'], ['Petr', 'Petrov', '3'], ['Jeff', 'Downing', '10'], ['Petr', 'Ivanov', '7'], ['John', 'Smith', '7'], ['John', 'Ivanov', '6']]
+def rebase(list1):
+    pass
+
+
+# Training
+# Преобразовать исходный список
+# [['Ivan', 'Ivanov', '5'], ['Petr', 'Petrov', '3'], ['Jeff', 'Downing', '10'], ['Petr', 'Ivanov', '7'], ['John', 'Smith', '7'], ['John', 'Ivanov', '6']]
+# В список имен
+# ['Ivan', 'Petr', 'Jeff', 'Petr', 'John', 'John']
+def get_names(list1):
+    pass
