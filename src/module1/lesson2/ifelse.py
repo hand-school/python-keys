@@ -8,7 +8,11 @@ def is_digit(value):
 # TODO: проверить, явялется ли пароль верным
 # Пароль: simple123456
 def is_password_valid(value):
-    pass
+    a = "simple123456"
+    if value == a:
+        return True
+    else:
+        return False
 
 
 # Trivial
@@ -19,7 +23,14 @@ def is_password_valid(value):
 # если введен верный логин, но неверный пароль - вывести "Неверный пароль"
 # если все введено вверно - вывести "Успешный вход"
 def sign_in(login, password):
-    pass
+    a = 'login123'
+    b = 'simple123456'
+    if login == a and password == b:
+        return 'Успешный вход'
+    elif login != a:
+        return 'Логин неверный'
+    else:
+        return 'Неверный пароль'
 
 
 # Trivial
@@ -28,7 +39,14 @@ def sign_in(login, password):
 # TODO: вернуть 3, если дробное число
 # TODO: вернуть 4, если bool
 def check_type(value):
-    pass
+    if type(value) == str:
+        return 1
+    elif type(value) == int:
+        return 2
+    elif type(value) == float:
+        return 3
+    else:
+        return 4
 
 
 # Trivial
@@ -38,14 +56,19 @@ def check_type(value):
 # Если равны - 0,
 # Если второе больше первого - -1
 def compare(a, b):
-    pass
-
+    if a>b:
+        return int(1)
+    elif a==b:
+        return int(0)
+    else:
+        return int(-1)
 
 # Easy
 # Мой возраст. Для заданного 0 < n < 200, рассматриваемого каквозраст человека,
 # TODO: Вернуть строку вида: «21 год», «32 года», «12 лет».
 def age_description(n):
     pass
+
 
 
 # Easy
