@@ -41,7 +41,7 @@ class TestTasks(unittest.TestCase):
     def test_maximum(self):
         self.assertEqual(10, maximum(10, 3, 4)[0])
         self.assertEqual(1, maximum(1, 1, 1)[0])
-        self.assertEqual(-120, maximum(-5, -5, -120)[0])
+        self.assertEqual(-5, maximum(-5, -5, -120)[0])
 
     def test_triangle_kind(self):
         self.assertEqual(-1, triangle_kind(3.0, 7.5, 4.0))

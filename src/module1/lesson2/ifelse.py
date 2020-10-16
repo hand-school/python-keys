@@ -8,7 +8,11 @@ def is_digit(value):
 # TODO: проверить, явялется ли пароль верным
 # Пароль: simple123456
 def is_password_valid(value):
-    pass
+    password = 'simple123456'
+    if password == value:
+        return True
+    else:
+        return False
 
 
 # Trivial
@@ -19,16 +23,34 @@ def is_password_valid(value):
 # если введен верный логин, но неверный пароль - вывести "Неверный пароль"
 # если все введено вверно - вывести "Успешный вход"
 def sign_in(login, password):
-    pass
+    log = 'login123'
+    paw = str('simple123456')
+    if log == login:
+        if paw == password:
+            return 'Успешный вход'
+        else:
+            return 'Неверный пароль'
+    else:
+        return 'Логин неверный'
+
+    # Trivial
 
 
-# Trivial
 # TODO: вернуть 1, если строка
 # TODO: вернуть 2, если целое число
 # TODO: вернуть 3, если дробное число
 # TODO: вернуть 4, если bool
 def check_type(value):
-    pass
+    if type(value) == str:
+        return 1
+    elif type(value) == int:
+        return 2
+    elif type(value) == float:
+        return 3
+    elif type(value) == bool:
+        return 4
+
+
 
 
 # Trivial
@@ -38,7 +60,13 @@ def check_type(value):
 # Если равны - 0,
 # Если второе больше первого - -1
 def compare(a, b):
-    pass
+    if a > b:
+        return 1
+    elif a == b:
+        return 0
+    elif a < b:
+        return -1
+
 
 
 # Easy

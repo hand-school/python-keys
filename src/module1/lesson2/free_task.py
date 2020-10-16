@@ -21,5 +21,5 @@ else:
     if a < 0 or b < 0 or h < 0:
         print("Данные не корректын")
     else:
-        V = a *  b * h
+        V = a * b * h
         print("Объем параллелепипеда: " + str(V))
