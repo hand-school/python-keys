@@ -22,6 +22,7 @@ def division(a, b):
     return a/b
 
 
+
 # Training
 # TODO: Вычислить остаток от деления двух чисел
 def mod(a, b):
