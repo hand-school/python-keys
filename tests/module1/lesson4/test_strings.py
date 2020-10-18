@@ -27,3 +27,7 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(-2, second_symbol('Issue', 'z'))
         self.assertEqual(-1, second_symbol('Issue', 'u'))
         self.assertEqual(2, second_symbol('Issue', 's'))
+
+
+if __name__ == '__main__':
+    unittest.main()

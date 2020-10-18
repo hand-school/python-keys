@@ -99,7 +99,7 @@ def common_part_of_lists(list1, list2):
 
 # Medium
 # Необходимо вернуть все различные элементы списков
-# Примечание:  списки заиание отсортированы по возрастанию
+# Примечание:  значения в списках отсортированы по возрастанию
 def uncommon_part_of_lists(list1, list2):
     result1 = common_part_of_lists(list1, list2)
     result2 = []
