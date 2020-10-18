@@ -38,7 +38,7 @@ class TestTasks(unittest.TestCase):
         expected = [-11, -5, 0, 11, 123, 324, 331, 1024, 23]
         actual = uncommon_part_of_lists(
             [1, 2, 3, 4, 5, 11, 123, 324, 456],
-            [-11, -5, 0, 1, 2, 3, 4, 5, 331, 456, 1024, 23]
+            [-11, -5, 0, 1, 2, 3, 4, 5, 23, 331, 456, 1024]
         )
         for element in expected:
             self.assertTrue(element in actual, 'Expected ' + str(expected) + '   Actual ' + str(actual))
