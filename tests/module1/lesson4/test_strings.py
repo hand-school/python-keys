@@ -25,3 +25,7 @@ class TestTasks(unittest.TestCase):
 
     def test_second_symbol(self):
         pass
+
+
+if __name__ == '__main__':
+    unittest.main()

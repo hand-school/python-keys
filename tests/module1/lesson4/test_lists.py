@@ -59,3 +59,7 @@ class TestTasks(unittest.TestCase):
                 [['Ivan', 'Ivanov', '5'], ['Petr', 'Petrov', '3'], ['Jeff', 'Downing', '10'], ['Petr', 'Ivanov', '7'],
                  ['John', 'Smith', '7'], ['John', 'Ivanov', '6']])
         )
+
+
+if __name__ == '__main__':
+    unittest.main()

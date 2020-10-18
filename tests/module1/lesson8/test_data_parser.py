@@ -23,3 +23,7 @@ class TestTasks(unittest.TestCase):
             max_grade_people(
                 "Marilyn 5,Claire 0,Larry 2,Ward 8,Cynthia 10,William 1,Jose 10,Joy 4,Vickey 4,Jonathan 0,Horace 4,James 2,Nora 4,Robert 9,David 6,Jorge 7,Jean 1,Betty 4,Warren 9,Carrie 1,Debra 8,John 0,Maxie 10")
         )
+
+
+if __name__ == '__main__':
+    unittest.main()

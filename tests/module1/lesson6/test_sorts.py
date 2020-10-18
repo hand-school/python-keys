@@ -18,3 +18,7 @@ class TestTasks(unittest.TestCase):
 
     def test_quick_sort(self):
         self.assertEqual([1, 2, 3, 4, 5, 100], quick_sort([100, 2, 4, 5, 3, 1]))
+
+
+if __name__ == '__main__':
+    unittest.main()
