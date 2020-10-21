@@ -67,7 +67,14 @@ def compare(a, b):
 # Мой возраст. Для заданного 0 < n < 200, рассматриваемого каквозраст человека,
 # TODO: Вернуть строку вида: «21 год», «32 года», «12 лет».
 def age_description(n):
-    pass
+    if (n >= 2 and n <= 4) or (n % 10 >= 2 and n % 10 <= 4):
+        return (n, " года")
+    elif n == 1:
+        return (n, " год")
+    elif n == 12:
+        return (n, " лет")
+    else:
+        return (n, " год")
 
 
 
@@ -76,7 +83,12 @@ def age_description(n):
 # TODO: Вывести через запятую сначала наибольшее число, затем два оставшихся
 # К примеру: return 5, 6, 7
 def maximum(a, b, c):
-    pass
+    if a >= b and a >= c:
+        return (a, b, c)
+    elif b >= a and b >= c:
+        return (b, a, c)
+    else:
+        return (c, a, b)
 
 
 # Easy
@@ -85,7 +97,14 @@ def maximum(a, b, c):
 # TODO: прямоугольным(вернуть 1) или тупоугольным(вернуть 2).
 # Если такой треугольник не существует, вернуть - 1.
 def triangle_kind(a, b, c):
-    pass
+    if (a == b and a > c and b > c) or (a == c and a > b and c > b) or (b == c and b > a and c > a):
+        return 0
+    elif a * a + b * b == c * c or a * a + c * c == b * b or c * c + b * b == a * a:
+        return 1
+    elif (a == b and a < c and b < c) or (a == c and a < b and c < b) or (b == c and b < a and c < a):
+        return 2
+    elif a + b < c or a + c < b or c + b < a:
+        return -1
 
 
 # Easy
