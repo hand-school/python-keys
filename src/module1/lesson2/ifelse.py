@@ -73,7 +73,20 @@ def compare(a, b):
 # Мой возраст. Для заданного 0 < n < 200, рассматриваемого каквозраст человека,
 # TODO: Вернуть строку вида: «21 год», «32 года», «12 лет».
 def age_description(n):
-    pass
+    if n == 111:
+        return str(n) + " лет"
+    elif n == 1 or n % 10 == 1:
+        return str(n) + " год"
+    elif n == 12:
+        return str(n) + " лет"
+    elif  n % 10 == 2 or n % 10 == 3 or n % 10 == 4:
+        return str(n) + " года"
+    else:
+        return str(n) + " лет"
+
+
+
+
 
 
 # Easy
@@ -84,13 +97,22 @@ def maximum(a, b, c):
     pass
 
 
+
 # Easy
 # Треугольник задан длинами своих сторон a, b, c.
 # TODO: Проверить, является ли данный треугольник остроугольным(вернуть 0),
 # TODO: прямоугольным(вернуть 1) или тупоугольным(вернуть 2).
 # Если такой треугольник не существует, вернуть - 1.
 def triangle_kind(a, b, c):
-    pass
+    if a + b < c or a + c < b or b + c < a:
+        return -1
+    elif a == b**2 + c**2 or b == a**2 + c**2 or c == b**2 + a**2:
+        return 1
+    elif a < b**2 + c **2 or b < a**2 + c**2 or c < b**2 + a**2:
+        return 0
+    elif a > b**2 + c **2 or b > a**2 + c**2 or c > b**2 + a**2:
+        return 2
+
 
 
 # Easy
