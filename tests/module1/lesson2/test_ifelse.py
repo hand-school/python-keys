@@ -38,6 +38,7 @@ class TestTasks(unittest.TestCase):
         self.assertEqual("111 лет", age_description(111))
         self.assertEqual("199 лет", age_description(199))
 
+
     def test_maximum(self):
         self.assertEqual(10, maximum(10, 3, 4)[0])
         self.assertEqual(1, maximum(1, 1, 1)[0])

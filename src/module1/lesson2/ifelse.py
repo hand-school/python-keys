@@ -66,14 +66,17 @@ def compare(a, b):
 # Мой возраст. Для заданного 0 < n < 200, рассматриваемого каквозраст человека,
 # TODO: Вернуть строку вида: «21 год», «32 года», «12 лет».
 def age_description(n):
-        if (n >= 2 and n <= 4) or (n % 10 >= 2 and n % 10 <= 4):
-            return (n , " года")
-        elif n == 1:
-            return (n , " год")
-        elif n == 12:
-            return (n , " лет")
-        else:
-            return (n , " год")
+    oper = n % 10
+    if (n - oper == 10 or n - oper == 110):
+        return (str(n)+" лет")
+    elif oper == 1:
+        return (str(n)+" год")
+    elif oper == 0:
+        return (str(n)+" лет")
+    elif oper <= 4:
+        return (str(n)+" года")
+    else:
+        return (str(n) + " лет")
 
 
 # Easy
@@ -86,7 +89,7 @@ def maximum(a, b, c):
     elif b >= a and b >= c:
         return (b, a, c)
     else:
-        return  (c, a, b)
+        return (c, a, b)
 
 
 # Easy
@@ -95,14 +98,14 @@ def maximum(a, b, c):
 # TODO: прямоугольным(вернуть 1) или тупоугольным(вернуть 2).
 # Если такой треугольник не существует, вернуть - 1.
 def triangle_kind(a, b, c):
-    if a*a+b*b == c*c or a*a+c*c == b*b or c*c+b*b == a*a:
-        return 1
-    elif (a == b and a > c and b > c) or (a == c and a > b and c > b) or (b == c and b > a and c > a):
-        return 0
-    elif (a == b and a < c and b < c) or (a == c and a < b and c < b) or (b == c and b < a and c < a):
-        return 2
-    elif a+b < c or a+c < b or c+b < a:
+    if a + b <= c or a + c <= b or c + b <= a:
         return -1
+    elif (a*a + b*b < c*c) or (a*a + c*c < b*b) or (b*b + c*c < a*a):
+        return 2
+    elif a*a+b*b == c*c or a*a+c*c == b*b or c*c+b*b == a*a:
+        return 1
+    else:
+        return 0
 
 
 # Easy
@@ -131,7 +134,11 @@ def multi_div(a, b, kind):
 # если из первой клетки ходом ладьи можно попасть во вторую,
 # иначе — False.
 def can_move(start_x, start_y, end_x, end_y):
-    pass
+
+    if start_x - end_x == 0 or start_y - end_y == 0:
+        return (True)
+    else:
+        return (False)
 
 
 # Medium
@@ -140,4 +147,7 @@ def can_move(start_x, start_y, end_x, end_y):
 # вторые — координаты второй клетки (гарантируется, что клетки не совпадают).
 # Программа должна вернуть True, если выбранные клетки одинакового цвета, иначе — False.
 def table_colors(point1_x, point1_y, point2_x, point2_y):
-    pass
+    if point1_x == point2_x - 1 or point1_y == point2_y - 1:
+        return (True)
+    else:
+        return (False)
