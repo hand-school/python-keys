@@ -35,10 +35,11 @@
 # a = 1234
 # b = a // 10
 # c = a // 1000
+# print(b)
 
 # a = 12345
 # second_num = (a // 10) % 10
 # print(second_num)
-#
+
 # custom_num = (a // 10) % 1000
 # print(custom_num)

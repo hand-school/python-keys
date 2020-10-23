@@ -87,17 +87,23 @@ def string_amount(a, b):
 # Easy
 # TODO: Поменять местами первую и последнюю цифры четырехзначного числа
 def swap(number):
-    pass
+    a = number // 1000
+    b = (number // 10) % 100
+    c = number % 10
+    return int(str(c) + str(b) + str(a))
 
 
 # Easy
 # TODO: Вывести следущее четное число
 def next_int(number):
-    pass
+    number = number // 2 * 2 + 2
+    return number
+
 
 
 # Easy
 # Пользователь задает целое трехзначное число (например, 478).
 # TODO: Необходимо вывести число, полученное из заданного перестановкой цифр в обратном порядке (например, 874).
 def revert_number(number):
-    pass
+    number = int(str(number % 10)  + str(number // 10 % 10) + str(number // 100))
+    return number
