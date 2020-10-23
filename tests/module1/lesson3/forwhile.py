@@ -20,7 +20,9 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(7, custom_len("1212123"))
 
     def test_revert(self):
-        pass  # TODO: тесты написать самостоятельно
+        self.assertEqual("321", revert("123"))
+        self.assertEqual("dsa", revert("asd"))
+        self.assertEqual("521", revert("125"))
 
     def test_counter_for(self):
         self.assertEqual(11, counter_for(1, 10, 1))

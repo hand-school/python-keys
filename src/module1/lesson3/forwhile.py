@@ -1,13 +1,20 @@
 # Training
 # TODO: Написать счетчик используя цикл while
 def counter(start, step, steps):
-    pass
+    while 0 < steps:
+        start = start + step
+        steps -= 1
+
+    return start
 
 
 # Training
 # TODO: Найти количество цифр в данном числе используя цикл while
 def num_count(number):
-    pass
+    count = 0
+    while count < len(str(number)):
+       count += 1
+    return count
 
 
 # Training
@@ -19,13 +26,24 @@ def custom_len(number):
 # Training
 # TODO: развернуть строчку используя цикл while
 def revert(string):
-    pass
+    result = ''
+    n = len(string) - 1
+    while n >= 0:
+        result = result + string[n]
+        n -= 1
+    return result
+
 
 
 # Training
 # TODO: Написать счетчик используя цикл for
-def counter_for(start, step, end):
-    pass
+def counter_for(start, step, steps):
+    s = start
+    for count in range(steps):
+        s = s + step
+    return s
+
+
 
 
 # Training
@@ -43,7 +61,12 @@ def custom_len_for(number):
 # Training
 # TODO: развернуть строчку используя цикл for
 def revert_for(string):
-    pass
+    result = ''
+    n = len(string) - 1
+    for n in range(len(string)):
+        result = result + string[n]
+        n -= 1
+    return result
 
 
 # Easy

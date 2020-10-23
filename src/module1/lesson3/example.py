@@ -119,3 +119,9 @@
 #
 # print(word)
 # print(reversed_word)
+string = "abgd"
+result = ''
+n = len(string) - 1
+while n >= 0:
+    result = result + string[n]
+    n -= 1
