@@ -11,16 +11,16 @@
 # bool_a = bool(a)
 # bool_b = bool(b)
 # bool_c = bool(c)
-# print(bool_a)  # True
-# print(bool_b)  # False
-# print(bool_c)  # True
+# print(bool_a)
+# print(bool_b)
+# print(bool_c)
 
 # a = "sdffdsf"
 # b = ""
 # bool_a = bool(a)
 # bool_b = bool(b)
-# print(bool_a)  # True
-# print(bool_b)  # False
+# print(bool_a)
+# print(bool_b)
 
 # true = True
 # false = False
