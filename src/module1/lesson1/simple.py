@@ -1,44 +1,44 @@
 # Training
 # TODO: Вычислить сумму двух чисел
 def amount(a, b):
-    pass
+    return sum([a, b])
 
 
 # Training
 # TODO: Вычислить разность двух чисел
 def subtraction(a, b):
-    pass
+    return a - b
 
 
 # Training
 # TODO: Вычислить произведение двух чисел
 def multiplication(a, b):
-    pass
+    return a * b
 
 
 # Training
 # TODO: Вычислить деление двух чисел
 def division(a, b):
-    pass
-
+    return a / b
 
 
 # Training
 # TODO: Вычислить остаток от деления двух чисел
 def mod(a, b):
-    pass
+    return a % b
 
 
 # Training
 # TODO: Вычислить целую часть от деления двух чисел
 def integer_part(a, b):
-    pass
+    return a // b
 
 
 # Trivial
 # TODO: Вычислить дискриминант квадратного уравнения
 def discriminant(a, b, c):
-    pass
+    d = (b ** 2) - 4 * a * c
+    return d
 
 
 # Trivial
@@ -51,7 +51,9 @@ def sqrt(a, b, c):
 # Пользователь задает время в часах, минутах и секундах, например, 8:20:35.
 # TODO: Рассчитать время в секундах, прошедшее с начала суток (30035 в данном случае).
 def seconds(hours, minutes, seconds):
-    pass
+    time_in_sec = ((hours * 60) * 60) + (minutes * 60) + seconds
+    return time_in_sec
+
 
 
 # Trivial
@@ -60,26 +62,31 @@ def seconds(hours, minutes, seconds):
 # Примечание: для веса, который может поднять 1 человек, завести отдельную переменную
 # Использовтаь операцию приведения типа int()
 def peoples_for_work(weight):
-    pass
+    one = 10
+    peoples = weight // 10
+    return peoples
 
 
 # Trivial
 # На вход поступают два числа в виде строки
 # TODO: Необходимо вывести сумму двух чисел
 def string_amount(a, b):
-    pass
+    return a + b
 
 
 # Easy
 # TODO: Поменять местами первую и последнюю цифры четырехзначного числа
 def swap(number):
-    pass
+    first = number // 1000
+    last = number % 10
+    mid = (number % 1000) // 10
+    return (last * 1000) + mid * 10 + first
 
 
 # Easy
 # TODO: Вывести следущее четное число
 def next_int(number):
-    pass
+    return number + 2
 
 
 # Easy

@@ -15,7 +15,8 @@ class TestTasks(unittest.TestCase):
         self.assertEqual({'a': 100}, add_to_dict('a', 100))
 
     def test_max_word_repeated(self):
-        self.assertEqual('de', max_word_repeated('de fef vsc de ss de cd'))
+        self.assertEqual('de', max_word_repeated('de   fef vsc de ss de cd'))
+        self.assertEqual('de', max_word_repeated('agf de fef vsc de ss de cd'))
 
     def test_lists_to_dict(self):
         self.assertEqual({'Леша': 4, 'Олег': 5}, lists_to_dict(['Леша', 'Олег'], [4, 5]))

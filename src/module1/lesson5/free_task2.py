@@ -7,4 +7,20 @@
 # Программа должна вывести на экран множество, в котором записаны совпавшие интересы.
 # Если совпадений нет, программа должна вывести строку ‘Нет общих интересов’.
 
-hobbie
+hobbie_count = int(input('Число интересов'))
+s1 = set()
+s2 = set()
+for i in range(0, hobbie_count):
+    hobbie = input('Ваши интересы')
+    s1.add(hobbie)
+    print(s1)
+hobbie_count = int(input('Число интересов'))
+for j in range(0, hobbie_count):
+    hobbie = input('Ваши интересы')
+    s2.add(hobbie)
+    print(s2)
+s3 = s1.intersection(s2)
+if len(s3) > 0:
+    print(s3)
+else:
+    print('Нет общих интересов')

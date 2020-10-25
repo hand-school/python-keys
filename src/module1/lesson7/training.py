@@ -30,13 +30,15 @@
 # (a1, a2) = (a2, a1)
 # print(a1, a2)
 
-def max(a, b, c):
-    if a >= b and a >= c:
-        return a, b, c
-    elif b >= a and b >= c:
-        return b, a, c
-    else:
-        return c, a, b
+# def max(a, b, c):
+#     if a >= b and a >= c:
+#         return a, b, c
+#     elif b >= a and b >= c:
+#         return b, a, c
+#     else:
+#         return c, a, b
+#
+# result = max(3, 2, 1)
+# print(result, type(result))
 
-result = max(3, 2, 1)
-print(result, type(result))
+
