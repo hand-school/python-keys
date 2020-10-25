@@ -25,8 +25,10 @@ def revert(string):
 # Training
 # TODO: Написать счетчик используя цикл for
 def counter_for(start, step, end):
-    pass
-
+    result = start
+    for _ in range(0, end):
+        result += step
+    return step
 
 # Training
 # TODO: Найти количество цифр в данном числе используя цикл for

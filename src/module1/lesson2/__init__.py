@@ -1,15 +1,14 @@
 def max(a, b, c):
-    if a > b and a > c:
+    if a > c and a > b:
         return a
-    elif b > a and b > c:
+    elif b > c:
         return b
     else:
         return c
 
 
-a = int(input())
-b = int(input())
-c = int(input())
-
-maximum = max(a, b, c)
-print(maximum)
+arg1 = 6
+arg2 = 5
+arg3 = 4
+j = max(arg1, arg2, arg3)
+print(j)
