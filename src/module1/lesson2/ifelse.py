@@ -63,18 +63,18 @@ def compare(a, b):
     else:
         return int(-1)
 
-# Easy
+# Easy не робит
 # Мой возраст. Для заданного 0 < n < 200, рассматриваемого каквозраст человека,
 # TODO: Вернуть строку вида: «21 год», «32 года», «12 лет».
 def age_description(n):
     if (n >= 2 and n <= 4) or (n % 10 >= 2 and n % 10 <= 4):
-        return (n, " года")
+        return str(n) + " года"
     elif n == 1:
-        return (n, " год")
+        return str(n) + " год"
     elif n == 12:
-        return (n, " лет")
+        return str(n) + " лет"
     else:
-        return (n, " год")
+        return str(n) + " год"
 
 
 
@@ -91,7 +91,7 @@ def maximum(a, b, c):
         return (c, a, b)
 
 
-# Easy
+# Easy не робит
 # Треугольник задан длинами своих сторон a, b, c.
 # TODO: Проверить, является ли данный треугольник остроугольным(вернуть 0),
 # TODO: прямоугольным(вернуть 1) или тупоугольным(вернуть 2).
