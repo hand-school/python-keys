@@ -11,7 +11,7 @@ class TestTasks(unittest.TestCase):
 
     def test_cut_word(self):
         self.assertEqual("П-т", cut_word("Привет"))
-        self.assertEqual("H-w", cut_word("Hello world"))
+        self.assertEqual("H-d", cut_word("Hello world"))
 
     def test_r_l_find(self):
         self.assertEqual((1, 1), r_l_find("Привет", "р"))
@@ -24,4 +24,4 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(2, count_chars("Hello world", "o"))
 
     def test_second_symbol(self):
-        pass
+        self.assertEqual(7, second_symbol("Hello world", "o"))

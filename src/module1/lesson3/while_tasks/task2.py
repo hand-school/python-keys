@@ -4,7 +4,7 @@
 
 summ = 0
 count = 1
-while count < 10:
+while count <= 10:
     _сlass = int(input("Введите количество учеников в {count} классе: ".format(count=count)))
 
     if  _сlass >= 0:

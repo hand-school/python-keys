@@ -95,8 +95,31 @@
 # string_to_list_2 = "hello_hello_hello_hello_hello hello hello hello hello hello"
 # new_list_2 = string_to_list_2.split("_")
 # print(new_list_2)
+list1 = [1, 2, 3, 4, 5, 11, 123, 324, 456]
+list2 = [-11, -5, 0, 1, 2, 3, 4, 5, 331, 456, 1024, 23]
+list3 = []
+list4 = []
+i = 0
+j = 0
+# for i in range(len(list2)):
+#     for j in range(len(list1)):
+#         if list2[i] != list1[j]:
+#             list3.append(list2[i])
+#         # elif list1[j] != list2[i]:
+#         #     list3.append(list2[i])
+list3 = list1 + list2
+list4 = list(set(list3))
+# for i in list3:
+#   if i not in list4:
+#     list4.append(i)
+# # for i in range(len(list3)):
+# #     if list3[i] != 0:
+# #         list4.append(list3[i])
+# #
+print(list4)
 
 
-# list_of_string = input().split()
-# list_of = [element[0] for element in list_of_string]
-# print(list_of)
+
+
+
+

@@ -10,7 +10,7 @@ delitel = 2
 
 if num >= 10 and num <= 99:
 
-    while int(num) % delitel:
+    while num % delitel:
         delitel += 1
 
     print("Наименьший делитель равен ", delitel)
