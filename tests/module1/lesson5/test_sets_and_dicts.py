@@ -13,6 +13,7 @@ class TestTasks(unittest.TestCase):
 
     def test_add_to_dict(self):
         self.assertEqual({'a': 100}, add_to_dict('a', 100))
+        self.assertEqual({'a': "asd"}, add_to_dict('a', "asd"))
 
     def test_max_word_repeated(self):
         self.assertEqual('de', max_word_repeated('de fef vsc de ss de cd'))
