@@ -40,3 +40,28 @@
 #     print(d3['Лена'])
 # else:
 #     print('Лена не в словаре')
+
+
+set1 = {1, 2, 3, 4, 5, 6, 7, 8, 9}
+set2 = {23, 2, 3, 5, 6, 8, 12, 3, 5, 5, 5}
+
+set3 = set()
+
+for elem in set1:
+    if elem in set2:
+        set3.add(elem)
+
+print(set3)
+
+set4 = set1.intersection(set2)
+print(set4)
+
+
+set5 = set1.difference(set2)
+print(set5)
+
+set6 = set2.difference(set1)
+print(set6)
+
+set7 = set1.union(set2)
+print(set7)
