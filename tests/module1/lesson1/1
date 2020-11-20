@@ -1,7 +1,7 @@
-s = 'Hello'
-result = ''
-count = len(s) - 1
-while count >= 0:
-    result = result + s[count]
-    count -= 1
-print(result)
+def bubble_sort(list1):
+list1 = [1, 2, 3, 4, 5, 100]
+    for j in range(len(list1)-1):
+        for i in range(len(list1) - j - 1):
+            if list1[i] > list1[i + 1]:
+                list1[i], list1[i + 1] = list[i + 1], list1[i]
+print(list1)
