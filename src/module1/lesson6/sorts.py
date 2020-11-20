@@ -40,13 +40,8 @@ def insert_sort(list1):
 # Найти максимальное и минимальное значение в списке
 # Примечание: необходимо использовать встроенную сортировку
 def get_max_and_min(list1):
-    list1 = [2, 5, 7, 100, 3, 1, -3, 201]
-    for j in range(len(list1) - 1):
-        for i in range(len(list1) - j - 1):
-            if list1[i] > list1[i + 1]:
-                list1[i], list1[i + 1] = list[i + 1], list1[i]
-
-    return(list1)
+    list = sorted(list1)
+    return (list[0], list[-1])
 
 
 # Hard
