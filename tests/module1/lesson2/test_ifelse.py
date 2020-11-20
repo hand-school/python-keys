@@ -50,7 +50,10 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(0, triangle_kind(1.0, 1.5, 1.5))
 
     def test_multi_div(self):
-        pass
+        self.assertEqual(6, multi_div(18, 3, 'div'))
+        self.assertEqual('error', multi_div(5, 0, 'div'))
+        self.assertEqual(15, multi_div(3, 5, 'multi'))
+        self.assertEqual(42, multi_div(7, 6, 'hophey'))
 
     def test_can_move(self):
         self.assertEqual(True, can_move(1, 1, 1, 8))

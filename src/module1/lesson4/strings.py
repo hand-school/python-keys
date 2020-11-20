@@ -32,9 +32,19 @@ def count_chars(sms, symbol):
 
 # Easy
 # Используя методы find() и rfind(), напиши функцию,
-# которая находит и возвращает индекс второго вхождения символа symbol
+# которая находит и возвращает индекс второго вхождения символа symbol.
 # Если символ встречается один раз,
 # программа должна вернуть -1, а если ни одного — вернуть -2.
 # ТЕСТЫ НАПИСАТЬ САМОСТОЯТЕЛЬНО
 def second_symbol(word, symbol):
-    pass
+    if word.find(symbol) == -1:
+        return -2
+    elif word.find(symbol) == word.rfind(symbol):
+        return -1
+    else:
+        i = word[word.find(symbol)+1:word.rfind(symbol)+1]
+        return i.find(symbol) + word.find(symbol) + 1
+
+        # start = word.find(symbol)
+        # end = word.rfind(symbol)
+        # return word.find(symbol, [start], [end])

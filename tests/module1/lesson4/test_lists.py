@@ -5,10 +5,11 @@ from src.module1.lesson4.lists import *
 class TestTasks(unittest.TestCase):
 
     def test_find_numbers(self):
-        pass
+        self.assertEqual(2, find_numbers([1, 2, 3, 120, -2, -3]))
+        self.assertEqual(3, find_numbers([24.5, -545, -23, 54.23, -3.56]))
 
     def test_find_people(self):
-        self.assertEqual(1, find_people(['Петров', 'Иванов', 'сидоров'], 'C'))
+        self.assertEqual(1, find_people(['Петров', 'Иванов', 'Сидоров'], 'С'))
 
     def test_change_numbers(self):
         self.assertEqual([1, 2, 3, 0, 0, 0], change_numbers([1, 2, 3, 0, -2, -3]))

@@ -98,9 +98,15 @@ def maximum(a, b, c):
 # Если такой треугольник не существует, вернуть - 1.
 def triangle_kind(a, b, c):
     pass
-    # if c**2 + b**2 == a**2 or c**2 + a**2 == b**2 or a**2 + b**2 == c**2:
-    #     return 1
-    # elif pass
+    if c > a+b or b > c+a or a > c+b:
+        return -1
+    elif c**2 + b**2 == a**2 or c**2 + a**2 == b**2 or a**2 + b**2 == c**2:
+        return 1
+    elif c**2 + b**2 < a**2 or c**2 + a**2 < b**2 or a**2 + b**2 < c**2:
+        return 2
+    else:
+        return 0
+
 
 
 # Easy
@@ -110,7 +116,13 @@ def triangle_kind(a, b, c):
 # при попытке деления на 0 выводится ошибка.
 # ТЕСТЫ НАПИСАТЬ САМОСТОЯТЕЛЬНО
 def multi_div(a, b, kind):
-    pass
+    if kind == "div":
+        if b == 0:
+            return 'error'
+        else:
+            return a/b
+    else:
+        return a*b
 
 
 # Medium
@@ -123,7 +135,10 @@ def multi_div(a, b, kind):
 # если из первой клетки ходом ладьи можно попасть во вторую,
 # иначе — False.
 def can_move(start_x, start_y, end_x, end_y):
-    pass
+    if start_x == end_x or start_y == end_y:
+        return True
+    else:
+        return False
 
 
 # Medium
