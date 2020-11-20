@@ -57,7 +57,6 @@ def counter_for(start, step, steps):
 
 
 # Training
-
 # TODO: Найти количество цифр в данном числе используя цикл for
 def num_count_for(number):
     number = str(number)

@@ -147,4 +147,7 @@ def can_move(start_x, start_y, end_x, end_y):
 # вторые — координаты второй клетки (гарантируется, что клетки не совпадают).
 # Программа должна вернуть True, если выбранные клетки одинакового цвета, иначе — False.
 def table_colors(point1_x, point1_y, point2_x, point2_y):
-    pass
+    point1_color = True
+    point2_color = False
+    if point1_color == point2_color:
+        print()
