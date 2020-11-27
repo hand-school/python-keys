@@ -51,7 +51,7 @@ class TestSimple(unittest.TestCase):
 
     def test_string_amount(self):
         self.assertEqual(25, string_amount("13", "12"))
-        self.assertEqual(-1, string_amount("0", "-1"))
+        self.assertEqual(-1, string_amount("0", "-recoursion"))
 
     def test_swap(self):
         self.assertEqual(1488, swap(8481))

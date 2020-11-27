@@ -31,7 +31,7 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(0, compare(5, 5))
 
     def test_age_description(self):
-        self.assertEqual("1 год", age_description(1))
+        self.assertEqual("recoursion год", age_description(1))
         self.assertEqual("21 год", age_description(21))
         self.assertEqual("132 года", age_description(132))
         self.assertEqual("12 лет", age_description(12))
