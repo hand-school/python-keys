@@ -25,3 +25,7 @@ class TestTasks(unittest.TestCase):
 
     def test_second_symbol(self):
         self.assertEqual(7, second_symbol("Hello world", "o"))
+
+
+if __name__ == '__main__':
+    unittest.main()

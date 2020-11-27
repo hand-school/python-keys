@@ -69,6 +69,5 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(False, table_colors(2, 3, 8, 8))
 
 
-
 if __name__ == '__main__':
     unittest.main()
