@@ -19,3 +19,7 @@ class TestTasks(unittest.TestCase):
 
     def test_lists_to_dict(self):
         self.assertEqual({'Леша': 4, 'Олег': 5}, lists_to_dict(['Леша', 'Олег'], [4, 5]))
+
+
+if __name__ == '__main__':
+    unittest.main()

@@ -1,7 +1,7 @@
 # Easy
 # На вход подается строка, состоаящая из двух слов, разделенных пробелами
 # К примеру: Ivan Ivanov Olegovich
-# Вернуть строку формата: "Привет, Ivan Olegovich! Твоя фамилия Ivanov?
+# Вернуть строку формата: "Привет, Ivan Olegovich! Твоя фамилия Ivanov?"
 def parse_fio(input_data):
     pass
 
