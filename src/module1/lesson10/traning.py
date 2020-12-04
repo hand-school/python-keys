@@ -16,11 +16,12 @@ class Human:
     def power_up(self, new_power):
         self.power += new_power
 
-    def iq_battle(self, other_iq):
-        if self.iq < other_iq:
-            print("other_iq win")
+    def iq_battle(self, other):
+        if self.iq > other.iq:
+            print('iq '"=", other.iq)
         else:
-            print("self win")
+            print('iq '"=", self.iq)
+
 
 man1 = Human(30, 50, 89, "m", 100)
 man1.skills()
@@ -30,3 +31,4 @@ man2 = Human(50, 50, 100, "w", 120)
 man2.skills()
 man1.attack(man2)
 man2.skills()
+man1.iq_battle(man2)
