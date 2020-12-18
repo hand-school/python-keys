@@ -35,7 +35,7 @@ class Robot:
 
     def recharge(self):
 
-        if 0<self.battery <= 20:
+        if 0 < self.battery <= 20:
             print("Осталось {}% заряда. Скоро робот {} потеряет возможность двигаться!\n".format(self.battery, self.name))
         elif self.battery == 0:
             print("Заряд робота {} иссяк!\n".format(self.name))
