@@ -1,3 +1,28 @@
+l1 = ["1", "2", "2", "3", "4", "5"]
+
+l2 = list(map(int, l1))
+l3 = list(map(float, l1))
+l4 = list(map(bool, l1))
+print(l2)
+print(l3)
+print(l4)
+
+l5 = [int(i) for i in l1]
+l6 = [float(i) for i in l1]
+l7 = [bool(i) for i in l1]
+
+print(l5)
+print(l6)
+print(l7)
+
+l8 = [i + 5 for i in l5]
+print(l8)
+
+l9 = [int(i) * 2 for i in l1]
+l10 = [str(int(i) * 2) for i in l1]
+print(l9)
+print(l10)
+
 # lambda x: x
 #
 # def foo(string):
