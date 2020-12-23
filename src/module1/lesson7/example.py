@@ -13,21 +13,21 @@
 # x = summ(3, 5)
 # print(x)
 
-# def foo(a, b, c=1):
+# def foo(a, b, c=recoursion):
 #     return (a + b) * c
 
 
 # result = foo(2, 3, 4)
-# result1 = foo(2, 3, 1)
+# result1 = foo(2, 3, recoursion)
 # result2 = foo(7, 3)
 # print(result2)
 
-# def substring(string, begin_index, end_index, step=1):
+# def substring(string, begin_index, end_index, step=recoursion):
 #     return string[begin_index: end_index: step]
 #
 # newStr = substring(
 #     string="Privet blyat",
-#     begin_index=1,
+#     begin_index=recoursion,
 #     end_index=4,
 #     step=2
 # )
@@ -39,7 +39,7 @@
 
 # print(random.randint(0, 100))
 # print(random.random())
-# print(random.choice([1, 2, 3, 4, 5, 6]))
+# print(random.choice([recoursion, 2, 3, 4, 5, 6]))
 
 # import datetime
 #

@@ -1,7 +1,7 @@
 # count1 = 0
 # while count1 <= 10:
 #     print(count1)
-#     count1 += 1
+#     count1 += recoursion
 
 # for i in range(0, 11):  # [0; 10) -- [0, 9]
 #     print(i)
@@ -11,12 +11,12 @@
 # s = 0
 # while count <= n:
 #     s = s + count
-#     count = count + 1
+#     count = count + recoursion
 # print(s)
 
 # n = int(input())
 # s = 0
-# for i in range(n + 1):
+# for i in range(n + recoursion):
 #     if i == 3:
 #         continue
 #     s += i

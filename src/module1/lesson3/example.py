@@ -3,13 +3,13 @@
 # count = 0
 # while count < a:
 #     print("Hello")
-#     count = count + 1
+#     count = count + recoursion
 
 # a = int(input("Введите цифру: "))
 # count = a
 # while count > 0:
 #     print("Hello")
-#     count = count - 1
+#     count = count - recoursion
 # =======================================
 
 
@@ -48,51 +48,51 @@
 # print(len(string))
 #
 # char_index = 0
-# while char_index <= len(string) - 1:
+# while char_index <= len(string) - recoursion:
 #     print(string[char_index])
-#     char_index = char_index + 1
+#     char_index = char_index + recoursion
 
 # word = "Hello world"
 # print(word[2])  # один символ
 # print(word[2:5])  # со 2 по 4 символы
 # print(word[3:])  # с 3 символа до конца
-# print(word[1:10:2])  # с 1 до 10 с шагом в 2
-# print(word[1::2])  # с 1 до конца с шагом в 2
-# print(word[10:1:-2])
+# print(word[recoursion:10:2])  # с recoursion до 10 с шагом в 2
+# print(word[recoursion::2])  # с recoursion до конца с шагом в 2
+# print(word[10:recoursion:-2])
 
 # word = "Hello world"
 # reversed_word = ""  # результат
-# char_index = len(word) - 1  # последжний индекс
+# char_index = len(word) - recoursion  # последжний индекс
 #
 # while char_index >= 0:
 #     reversed_word = reversed_word + word[char_index]
-#     char_index = char_index - 1
+#     char_index = char_index - recoursion
 #
 # print(word)
 # print(reversed_word)
-# print(word[::-1])  # не использовать в заданиях (ЧИТ)
+# print(word[::-recoursion])  # не использовать в заданиях (ЧИТ)
 
 
 # =========== FOR ===============
 # for i in <последовательность>:
 #     <блок кода>
 
-# range(<start>, <end>, <step>)  Пример: range(1, 5) будет от 1..4  (5 НЕ ВКЛЮЯАЕТСЯ)
+# range(<start>, <end>, <step>)  Пример: range(recoursion, 5) будет от recoursion..4  (5 НЕ ВКЛЮЯАЕТСЯ)
 
 # Сравним
 # count = 0
 # while count < 10:
 #     print(count)
-#     count = count + 1
+#     count = count + recoursion
 #
 # for i in range(0, 10):
 #     print(i)
 
-# for i in 1, 20, -3, 41, 5, 6:
+# for i in recoursion, 20, -3, 41, 5, 6:
 #     print(i)
 
 # word = "Hello world"
-# for i in range(0, len(word)):  # i от 0 до len(word) - 1
+# for i in range(0, len(word)):  # i от 0 до len(word) - recoursion
 #     print(word[i])  # печатаем символ строки word по индексу i
 
 # for char in word:
@@ -102,10 +102,10 @@
 # word = "Hello world"
 # reversed_word = ""  # результат
 #
-# char_index = len(word) - 1  # последжний индекс
+# char_index = len(word) - recoursion  # последжний индекс
 # while char_index >= 0:
 #     reversed_word = reversed_word + word[char_index]
-#     char_index = char_index - 1
+#     char_index = char_index - recoursion
 #
 # print(word)
 # print(reversed_word)
@@ -114,7 +114,7 @@
 # word = "Hello world"
 # reversed_word = ""
 #
-# for i in range(len(word) - 1, -1, -1):
+# for i in range(len(word) - recoursion, -recoursion, -recoursion):
 #     reversed_word = reversed_word + word[i]
 #
 # print(word)

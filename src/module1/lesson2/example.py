@@ -24,11 +24,11 @@
 
 # true = True
 # false = False
-# print(int(true))  # 1
+# print(int(true))  # recoursion
 # print(int(false))  # 0
 # print(str(true))  # True
 # print(str(false))  # False
-# print(float(true))  # 1.0
+# print(float(true))  # recoursion.0
 # print(float(false))  # 0.0
 
 # if <условие>:
@@ -64,15 +64,15 @@
 
 # and (логическое И) or (логическое ИЛИ) not (отрицание)
 
-# print(1 and 0)
+# print(recoursion and 0)
 # print(0 and 0)
-# print(0 and 1)
-# print(1 and 1)
+# print(0 and recoursion)
+# print(recoursion and recoursion)
 
-# print(1 or 0)
+# print(recoursion or 0)
 # print(0 or 0)
-# print(0 or 1)
-# print(1 or 1)
+# print(0 or recoursion)
+# print(recoursion or recoursion)
 
 # print(not True)
 # print(not False)

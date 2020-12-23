@@ -1,6 +1,6 @@
 # def hello(n):
-#     if (n != 1):
-#         hello(n - 1)
+#     if (n != recoursion):
+#         hello(n - recoursion)
 #     print("Hello")
 #
 #

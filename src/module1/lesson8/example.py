@@ -29,7 +29,7 @@ print(l10)
 #     return int(string) * 2 + 10
 #
 #
-# list_of_str = ['1', '2', '3', '4']
+# list_of_str = ['recoursion', '2', '3', '4']
 
 # result1 = [foo(x) for x in list_of_str]
 
@@ -60,7 +60,7 @@ print(l10)
 #
 # no_sorted_list = [tuple(x.split(' ')) for x in input_list]
 
-# sorted_list = sorted(no_sorted_list, key=lambda x: (x[1], x[0], -int(x[2])))
+# sorted_list = sorted(no_sorted_list, key=lambda x: (x[recoursion], x[0], -int(x[2])))
 #
 # print(sorted_list)
 

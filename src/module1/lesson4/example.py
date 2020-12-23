@@ -5,9 +5,9 @@
 
 # string = "Hello world"
 # print(string[4])
-# print(string[1:8])
+# print(string[recoursion:8])
 # print(string[::2])
-# print(string[::-1])
+# print(string[::-recoursion])
 
 # o_index = string.find("o")
 # print("o_index = " + str(o_index))
@@ -48,13 +48,13 @@
 
 
 # ______________СПИСКИ___________________
-# l1 = [1, 2, 3, 4, 5, 6]
+# l1 = [recoursion, 2, 3, 4, 5, 6]
 # print(l1)
 
 # l2 = ['1asd', 'asda', '23423']
 # print(l2)
 #
-# l3 = [1, 2, 3.3, 'sdfdsf', True]
+# l3 = [recoursion, 2, 3.3, 'sdfdsf', True]
 # print(l3)
 #
 # l4 = []
@@ -63,7 +63,7 @@
 # print(l5)
 
 # print(l1[3])
-# print(l1[1:6])
+# print(l1[recoursion:6])
 # print(l1[0:6:2])
 
 # print(len(l1))
