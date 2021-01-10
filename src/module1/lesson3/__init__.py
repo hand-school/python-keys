@@ -1,41 +1,39 @@
-# count1 = 0
-# while count1 <= 10:
-#     print(count1)
-#     count1 += 1
-
-# for i in range(0, 11):  # [0; 10) -- [0, 9]
-#     print(i)
-
-# n = int(input())
-# count = 0
+# def my_range(start, end, i):
+#     while start < end:
+#         start = start * i
+#     yield my_range(start, end, i)
+#
+#
+# for count in my_range(0, 1000, 10):
+#     print(count)
+# print("the end")
+#
+#
+# list = [24515, 124, -23, 241, -543]
 # s = 0
-# while count <= n:
-#     s = s + count
-#     count = count + 1
+# for i in list:
+#     # print(i)
+#     if i < 0:
+#         s += 1
 # print(s)
-
-# n = int(input())
+# peoples = ['Петров', 'Иванов', 'сидоров']
+# filter_char = 'с'
 # s = 0
-# for i in range(n + 1):
-#     if i == 3:
-#         continue
-#     s += i
+# for i in peoples:
+#     if i[0] == filter_char:
+#         s += 1
 # print(s)
+word = "152686321984656449"
+symbol = "2"
 
-s = 'Hello'
-count = 0
+if word.find(symbol) == -1:
+    print(-2)
+elif word.find(symbol) == word.rfind(symbol):
+    print(-1)
+else:
 
-while count < len(s):
-    print(s[count])
-    count += 1
-
-print("---------------")
-
-for c in s:
-    print(c)
-
-print("---------------")
-
-for i in range(0, len(s), 2):
-    print(s[i])
-
+    i = word[word.find(symbol)+1:word.rfind(symbol)+1]
+    print(i)
+    print(word.find(symbol))
+    print(i.find(symbol))
+    print(i.find(symbol) + word.find(symbol) + 1)

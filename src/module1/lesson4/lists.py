@@ -3,7 +3,15 @@
 # Вывести количетсво отрицательных чисел
 # ТЕСТЫ НАПИСАТЬ САМОСТОЯТЕЛЬНО
 def find_numbers(list):
-    pass
+    s = 0
+    for element in list:
+        if element < 0:
+            s += 1
+    return s
+
+
+
+
 
 
 # Easy
@@ -12,7 +20,13 @@ def find_numbers(list):
 # Вывести количетсво фамилий, начинающихся на эту букву
 # ИГНОРИРОВТЬ case
 def find_people(peoples, filter_char):
-    pass
+    s = 0
+    for i in peoples:
+        if i[0] == filter_char:
+            s += 1
+    return s
+
+
 
 
 # Easy
