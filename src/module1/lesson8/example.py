@@ -56,28 +56,28 @@
 #     print(i)
 
 
-def get_list():
-    return [1, 2, 3, 4, 5, 6, 7]
-
-
-def generate_list(N):
-    count = 0
-    while count < N:
-        count += 1
-        yield count
-
-
-print(generate_list(10))
+# def get_list():
+#     return [1, 2, 3, 4, 5, 6, 7]
+#
+#
+# def generate_list(N):
+#     count = 0
+#     while count < N:
+#         count += 1
+#         yield count
+#
+#
+# print(generate_list(10))
 
 # for element in generate_list(10):
 #     print(element)
 
-generator = generate_list(10)
-print(generator.__next__())
-print(generator.__next__())
-print(generator.__next__())
-print(generator.__next__())
-print(generator.__next__())
+# generator = generate_list(10)
+# print(generator.__next__())
+# print(generator.__next__())
+# print(generator.__next__())
+# print(generator.__next__())
+# print(generator.__next__())
 
 # _____ЗАДАЧА_______
 # ИМЯ ФАМИЛИЯ ОТМЕТКА
@@ -107,3 +107,74 @@ print(generator.__next__())
 # sorted_list = sorted(no_sorted_list, key=lambda elem: int(elem[2]), reverse=True)
 #
 # print(sorted_list)
+# range_field = range(10)
+#
+# for i in range_field:
+#     print(i)
+#
+# for i in range_field:
+#     print(i)
+
+# lst = [1, 2, 3, 4, 5]
+
+# for element in lst:
+#     print(element)
+
+# iterator = lst.__iter__()
+
+# print(iterator.__next__())
+# print(iterator.__next__())
+# print(iterator.__next__())
+# print(iterator.__next__())
+# print(iterator.__next__())
+# print(iterator.__next__())
+
+# is_iterable = True
+# while is_iterable:
+#     try:
+#         element = iterator.__next__()
+#         print(element)
+#     except StopIteration as err:
+#         is_iterable = False
+
+# def append_list(lst: list = []) -> None:
+#     lst.append(5)
+#     lst.append(6)
+#     print(lst)
+#
+#
+# test_list1 = [1, 2, 3]
+# test_list2 = [1, 2, 3]
+# append_list(test_list1)  # [1, 2, 3, 5, 6]
+# append_list()  # [5, 6]
+# append_list(test_list2)  # [1, 2, 3, 5, 6]
+# append_list()  # [5, 6, 5, 6]
+# append_list()  # [5, 6, 5, 6, 5, 6]
+#
+# lst1 = [1, 2, 3]  # изм
+# tuple1 = (1, 2, 3)  # не изм
+# set1 = {1, 2, 3}  # изм
+# dict1 = {'a': 1, 'b': 2, 'c': 3}  # изм
+# str1 = 'dfsdfdf'  # не изм
+# str1 += 'new str'     # -> 'dfsdfdfnew str'
+#
+# fr_set = frozenset((1, 2, 3)) # не изм
+
+gen_lst = [i for i in range(0, 10) if i > 5]
+print(gen_lst)
+
+gen_set = {i for i in range(0, 10) if i > 5}
+print(gen_set)
+
+def genexpr(a=0,b=10) :
+    for i in range(a, b):
+        if i > 5:
+            yield i
+
+gen1 = (i for i in range(0, 10) if i > 5)
+gen2 = genexpr()
+print(type(gen1))
+print(gen1)
+print()
+print(type(gen2))
+print(gen2)
