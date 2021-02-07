@@ -28,5 +28,10 @@ async def command_clear(message: aiogram.types.Message):
     await message.reply("Данная функция пока не реализованна")
 
 
+@dp.message_handler(aiogram.types.Message())
+async def message_bad_habit(massage:aiogram.types.Message):
+    pass
+
+
 if __name__ == '__main__':
     aiogram.executor.start_polling(dp, skip_updates=True)
