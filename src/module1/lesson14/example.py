@@ -10,3 +10,4 @@ try:
     raise NameError("Ты че урод")
 except NameError as e:
     logger.log(logger.Level.ERROR, f"Ошибка в имени! Сообщение '{str(e)}'")
+    logger.print_logo("ERROR")
