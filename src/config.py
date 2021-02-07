@@ -1,0 +1,2 @@
+token = "1673384259:AAG6GdhhIHvECGHEAj8iQaJSffQXfoxVb4M"
+api_weather = '241c849c331d0e2d46b1888f976e68cb'
