@@ -1,36 +1,45 @@
 import aiogram
 import logging
-from src.config import token
-import src.sql_commands
+from aiogram.contrib.fsm_storage.memory import MemoryStorage
+import src.keyboards as kb
+from src.config import token, MsgReply
+from src.sql_commands import SQLiter
 
 logging.basicConfig(level=logging.INFO)
 
 bot = aiogram.Bot(token=token)
 
-dp = aiogram.Dispatcher(bot)
+storage = MemoryStorage()
+
+dp = aiogram.Dispatcher(bot, storage=storage)
+
+db = SQLiter('habits.db')
 
 
 @dp.message_handler(commands="start")
 async def message_welcome(message: aiogram.types.Message):
-    await message.reply("Привет, {}! \nЯ бот для отслеживания ик вредных привычек.\nЯ помогу тебя урегулировать твои "
-                        "вредные пркевычки, давай начнём!\nВыбери инетересующую тебя привычку."
-                        .format(aiogram.types.User.first_name))
+    print(message.from_user.id)
+    db.add_user(message.from_user.id)
+    await message.reply(MsgReply.greeting.format(message.from_user.first_name), reply_markup=kb.starting_kb)
 
 
 @dp.message_handler(commands="help")
 async def message_help(message: aiogram.types.Message):
-    await message.reply(
-        "Напиши команду /start, узнать о боте.\nНапиши команду /clear, чтобы очить всю информацию о себе в памяти бота")
+    await message.reply(MsgReply.helping)
 
 
 @dp.message_handler(commands="clear")
 async def command_clear(message: aiogram.types.Message):
-    await message.reply("Данная функция пока не реализованна")
+    if db.user_exists(message.from_user.id):
+        db.delete_user(message.from_user.id)
+        await message.reply(MsgReply.clearing_apply)
+    else:
+        await message.reply(MsgReply.clearing_cancel)
 
 
-@dp.message_handler(aiogram.types.Message())
-async def message_bad_habit(massage:aiogram.types.Message):
-    pass
+# @dp.message_handler(aiogram.types.Message())
+# async def message_bad_habit(massage: aiogram.types.Message):
+#     pass
 
 
 if __name__ == '__main__':
