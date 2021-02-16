@@ -5,13 +5,22 @@ import sticker
 bot = telebot.TeleBot(config.token)
 START = 'start'
 HELP = 'help'
-keyboard = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
-keyboard.row('Привет', 'Фильм', 'Пока')
+keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
+keyboard1.row('Привет')
+keyboard2 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
+keyboard2.row('Фильм')
+keyboard3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
+keyboard3.row('Пока')
 
 
-@bot.message_handler(commands=[START, HELP])
+@bot.message_handler(commands=[HELP])
+def send_help(message):
+    bot.reply_to(message, f'Напиши команду /start и мы начнем')
+
+
+@bot.message_handler(commands=[START])
 def send_welcome(message):
-    bot.reply_to(message, f'Вас привествует КиноджоБот', reply_markup=keyboard, )
+    bot.reply_to(message, f'Вас привествует КиноджоБот', reply_markup=keyboard1)
 
 
 @bot.message_handler(content_types=['text'])
@@ -20,7 +29,7 @@ def get_text_messages(message):
     username = message.from_user.first_name
     user_text = message.text.lower
     if user_text() == 'привет':
-        bot.send_message(chat_id, f'Привет, {username}')
+        bot.send_message(chat_id, f'Привет, {username}', reply_markup=keyboard2)
         bot.send_sticker(chat_id, sticker.hello_sticker)
     elif user_text() == 'фильм':
         markup = telebot.types.InlineKeyboardMarkup()
@@ -80,8 +89,7 @@ def query_handler(call):
     elif call.data == 'Документальный':
         answer = 'Вот список!'
     else:
-        answer = 'Очень жаль!'
-
+        bot.send_message(call.message.chat.id, 'Очень жаль!', reply_markup=keyboard3)
     bot.send_message(call.message.chat.id, answer)
 
 
