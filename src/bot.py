@@ -5,7 +5,8 @@
 from time import sleep
 
 import src.config
-import src.weather
+
+from src.weather import city_weather
 import telebot
 import requests
 
@@ -26,6 +27,7 @@ def assist(message):
 
 # Тут метод weather
 
+src.weather.city_weather
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
