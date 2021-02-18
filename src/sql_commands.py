@@ -28,13 +28,13 @@ class SQLiter:
     def add_sex(self, user_id, sex):
         """Добавление данных о поле полльзователя"""
         with self.connection:
-            return self.cursor.execute("UPDATE `users` SET `sex` = ? WHERE user_id = ? ", (sex, user_id))
+            return self.cursor.execute("UPDATE `users` SET `sex` = ? WHERE user_id = ? ", (sex, user_id,))
 
     def add_habit(self, user_id, habit):
         """Добавление данных о цели пользователя"""
         with self.connection:
-            return self.cursor.execute("UPDATE `users` SET `target` = ? WHERE user_id = ?",
-                                       (habit, user_id))
+            return self.cursor.execute("UPDATE `users` SET `habit` = ? WHERE user_id = ?",
+                                       (habit, user_id,))
 
     def delete_user(self, user_id):
         """Удаления пользователя из БД"""
