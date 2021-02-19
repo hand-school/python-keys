@@ -3,6 +3,7 @@ import config
 import sticker
 
 bot = telebot.TeleBot(config.token)
+url = 'https://kinopoiskapiunofficial.tech/api/v2.1/films'
 START = 'start'
 HELP = 'help'
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -40,11 +41,10 @@ def get_text_messages(message):
         markup.add(telebot.types.InlineKeyboardButton(text='Мультфильм', callback_data='Мультфильм'))
         markup.add(telebot.types.InlineKeyboardButton(text='Драма', callback_data='Драма'))
         markup.add(telebot.types.InlineKeyboardButton(text='Мелодрама', callback_data='Мелодрама'))
-        markup.add(telebot.types.InlineKeyboardButton(text='Мистика', callback_data='Мистика'))
         markup.add(telebot.types.InlineKeyboardButton(text='Научный', callback_data='Научный'))
         markup.add(telebot.types.InlineKeyboardButton(text='Криминал', callback_data='Криминал'))
         markup.add(telebot.types.InlineKeyboardButton(text='Ужасы', callback_data='Ужасы'))
-        markup.add(telebot.types.InlineKeyboardButton(text='Фэнтези', callback_data='Фэнтези'))
+        markup.add(telebot.types.InlineKeyboardButton(text='Фантастика', callback_data='Фантастика'))
         markup.add(telebot.types.InlineKeyboardButton(text='Триллер', callback_data='Триллер'))
         markup.add(telebot.types.InlineKeyboardButton(text='Документальный', callback_data='Документальный'))
         markup.add(telebot.types.InlineKeyboardButton(text='Ничего не подходит', callback_data='Ничего не подходит'))
@@ -61,37 +61,36 @@ def query_handler(call):
     bot.answer_callback_query(callback_query_id=call.id, text='Хороший выбор!')
     answer = ''
     if call.data == 'Аниме':
-        answer = 'Вот список!'
+        answer = 'https://jut.su/jojo-bizarre-adventure/season-1/episode-1.html'
     elif call.data == 'Комедия':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/535341/'
     elif call.data == 'Боевик':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/1009536/'
     elif call.data == 'Детектив':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/467099/'
     elif call.data == 'Мультфильм':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/81621/!'
     elif call.data == 'Драма':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/220541/'
     elif call.data == 'Мелодрама':
-        answer = 'Вот список!'
-    elif call.data == 'Мистика':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/22803/'
     elif call.data == 'Научный':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/652833/'
     elif call.data == 'Криминал':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/278522/'
     elif call.data == 'Ужасы':
-        answer = 'Вот список!'
-    elif call.data == 'Фэнтези':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/686898/'
+    elif call.data == 'Фантастика':
+        answer = 'https://www.kinopoisk.ru/film/538225'
     elif call.data == 'Триллер':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/572461/'
     elif call.data == 'Документальный':
-        answer = 'Вот список!'
+        answer = 'https://www.kinopoisk.ru/film/424378/'
     else:
         bot.send_message(call.message.chat.id, 'Очень жаль!', reply_markup=keyboard3)
+
     bot.send_message(call.message.chat.id, answer)
 
 
-bot.polling(none_stop=True)
+bot.polling(none_stop=True, interval=0)
 
