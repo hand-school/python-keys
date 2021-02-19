@@ -44,7 +44,22 @@ def make_public_task(task):
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
-    return jsonify({'tasks': tasks})
+    result = tasks
+    if not request.args.get('done') is None:
+        result = list(filter(lambda t: t['done'] == bool(request.args.get('done')), tasks))
+    if not request.args.get('title') is None:
+        result = list(filter(lambda t: t['title'] == request.args.get('title'), tasks))
+    return jsonify({'tasks': result})
+
+
+@app.route('/todo/api/v1.0/tasks', methods=['GET'])
+def get_tasks():
+    result = tasks
+    if not request.args.get('done') is None:
+        result = list(filter(lambda t: t['done'] == bool(request.args.get('done')), tasks))
+    if not request.args.get('done') is None:
+        result = list(filter(lambda t: t['done'] == bool(request.args.get('done')), tasks))
+    return jsonify({'tasks': result})
 
 
 @app.route('/todo/api/v1.0/tasks/<int:task_id>', methods=['GET'])
@@ -57,7 +72,7 @@ def get_task(task_id):
 
 @app.route('/todo/api/v1.0/tasks', methods=['POST'])
 def create_task():
-    if not request.json or 'title' not in request.json:
+    if not request.json or not 'title' in request.json:
         abort(400)
     task = {
         'id': tasks[-1]['id'] + 1,
