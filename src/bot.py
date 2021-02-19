@@ -7,8 +7,6 @@ from time import sleep
 import src.config
 
 from src.weather import bot
-from src.weather import WeatherFunc
-from src.weather import CityInfo
 
 import telebot
 import requests
@@ -26,11 +24,6 @@ def welcome(message):
 def assist(message):
     bot.send_message(message.chat.id,
                      '/start запуск бота\n/help команды бота\nчтобы узнать погоду напишите в чат название города')
-
-#При вводе города нужно вывести инфу по городу. Дальше необходимо по кнопке выбрать день, погоду котрого нужно узнать
-CityInfo.city_description
-WeatherFunc.city_weather
-
 
 
 if __name__ == '__main__':
