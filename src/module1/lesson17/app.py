@@ -44,7 +44,12 @@ def make_public_task(task):
 
 @app.route('/todo/api/v1.0/tasks', methods=['GET'])
 def get_tasks():
-    return jsonify({'tasks': tasks})
+    result = tasks
+    if not request.args.get('done') is None:
+        result = list(filter(lambda t: t['done'] == bool(request.args.get('done')), tasks))
+    if not request.args.get('title') is None:
+        result = list(filter(lambda t: t['title'] == request.args.get('title'), tasks))
+    return jsonify({'tasks': result})
 
 
 @app.route('/todo/api/v1.0/tasks/<int:task_id>', methods=['GET'])
@@ -57,12 +62,13 @@ def get_task(task_id):
 
 @app.route('/todo/api/v1.0/tasks', methods=['POST'])
 def create_task():
-    if not request.json or 'title' not in request.json:
+
+    if not request.form or not 'title' in request.form:
         abort(400)
     task = {
         'id': tasks[-1]['id'] + 1,
-        'title': request.json['title'],
-        'description': request.json.get('description', ""),
+        'title': request.form.get('title'),
+        'description': request.form.get('description', ""),
         'done': False
     }
     tasks.append(task)
@@ -74,17 +80,17 @@ def update_task(task_id):
     task = list(filter(lambda t: t['id'] == task_id, tasks))
     if len(task) == 0:
         abort(404)
-    if not request.json:
+    if not request.form:
         abort(400)
-    if 'title' in request.json:
+    if 'title' in request.form:
         abort(400)
-    if 'description' in request.json:
+    if 'description' in request.form:
         abort(400)
-    if 'done' in request.json and type(request.json['done']) is not bool:
+    if 'done' in request.form and type(request.form.get('done')) is not bool:
         abort(400)
-    task[0]['title'] = request.json.get('title', task[0]['title'])
-    task[0]['description'] = request.json.get('description', task[0]['description'])
-    task[0]['done'] = request.json.get('done', task[0]['done'])
+    task[0]['title'] = request.form.get('title', task[0]['title'])
+    task[0]['description'] = request.form.get('description', task[0]['description'])
+    task[0]['done'] = request.form.get('done', task[0]['done'])
     return jsonify({'task': make_public_task(task[0])})
 
 
