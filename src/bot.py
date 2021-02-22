@@ -1,18 +1,14 @@
 #Докрутить картинку города и информация о городе. Перенести функционал погоды в отдельный файл
 # Оформить файл README.md под бота
-
-
 from time import sleep
-
 import src.config
-
 from src.weather import bot
-
 import telebot
 import requests
 
 
 sleep(1)
+
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
