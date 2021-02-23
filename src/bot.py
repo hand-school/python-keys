@@ -22,5 +22,10 @@ def assist(message):
                      '/start запуск бота\n/help команды бота\nчтобы узнать погоду напишите в чат название города')
 
 
+@bot.message_handler(content_types=['text'])
+def get_text_messages(message):
+    pass
+
+
 if __name__ == '__main__':
     bot.polling(none_stop=True)
