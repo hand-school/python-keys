@@ -3,7 +3,6 @@ import config
 import sticker
 
 bot = telebot.TeleBot(config.token)
-url = 'https://kinopoiskapiunofficial.tech/api/v2.1/films'
 START = 'start'
 HELP = 'help'
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -14,14 +13,14 @@ keyboard3 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
 keyboard3.row('Пока')
 
 
-@bot.message_handler(commands=[HELP])
+@bot.message_handler(commands=['help'])
 def send_help(message):
-    bot.reply_to(message, f'Напиши команду /start и мы начнем')
+    bot.send_message(message.chat.id, f'Напиши команду /start и мы начнем')
 
 
-@bot.message_handler(commands=[START])
+@bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, f'Вас привествует КиноджоБот', reply_markup=keyboard1)
+    bot.send_message(message.chat.id, f'Вас привествует КиноджоБот', reply_markup=keyboard1)
 
 
 @bot.message_handler(content_types=['text'])
@@ -59,38 +58,49 @@ def get_text_messages(message):
 @bot.callback_query_handler(func=lambda call: True)
 def query_handler(call):
     bot.answer_callback_query(callback_query_id=call.id, text='Хороший выбор!')
-    answer = ''
+    sad = 'Очень жаль'
     if call.data == 'Аниме':
         answer = 'https://jut.su/jojo-bizarre-adventure/season-1/episode-1.html'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Комедия':
         answer = 'https://www.kinopoisk.ru/film/535341/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Боевик':
         answer = 'https://www.kinopoisk.ru/film/1009536/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Детектив':
         answer = 'https://www.kinopoisk.ru/film/467099/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Мультфильм':
-        answer = 'https://www.kinopoisk.ru/film/81621/!'
+        answer = 'https://www.kinopoisk.ru/film/81621/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Драма':
         answer = 'https://www.kinopoisk.ru/film/220541/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Мелодрама':
         answer = 'https://www.kinopoisk.ru/film/22803/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Научный':
         answer = 'https://www.kinopoisk.ru/film/652833/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Криминал':
         answer = 'https://www.kinopoisk.ru/film/278522/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Ужасы':
         answer = 'https://www.kinopoisk.ru/film/686898/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Фантастика':
         answer = 'https://www.kinopoisk.ru/film/538225'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Триллер':
         answer = 'https://www.kinopoisk.ru/film/572461/'
+        bot.send_message(call.message.chat.id, answer)
     elif call.data == 'Документальный':
         answer = 'https://www.kinopoisk.ru/film/424378/'
+        bot.send_message(call.message.chat.id, answer)
     else:
-        bot.send_message(call.message.chat.id, 'Очень жаль!', reply_markup=keyboard3)
-
-    bot.send_message(call.message.chat.id, answer)
+        bot.send_message(call.message.chat.id, sad, reply_markup=keyboard3)
 
 
-bot.polling(none_stop=True, interval=0)
-
+if __name__ == '__main__':
+    bot.polling(none_stop=True)
