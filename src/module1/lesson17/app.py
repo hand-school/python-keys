@@ -68,7 +68,7 @@ def get_task(task_id):
 
 @app.route('/todo/api/v1.0/tasks', methods=['POST'])
 def create_task():
-    if not request.form or not 'title' in request.form:
+    if not request.form or 'title' not in request.form:
         abort(400)
     task = {
         'id': tasks[-1]['id'] + 1,
