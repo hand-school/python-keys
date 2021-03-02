@@ -55,49 +55,31 @@ def get_text_messages(message):
         bot.send_sticker(chat_id, sticker.wtf_sticker)
 
 
+cinema = {
+    'Аниме': 'https://jut.su/jojo-bizarre-adventure/season-1/episode-1.html',
+    'Комедия': 'https://www.kinopoisk.ru/film/535341',
+    'Боевик': 'https://www.kinopoisk.ru/film/1009536/',
+    'Детектив': 'https://www.kinopoisk.ru/film/467099/',
+    'Мультфильм': 'https://www.kinopoisk.ru/film/81621/',
+    'Драма': 'https://www.kinopoisk.ru/film/220541/',
+    'Мелодрама': 'https://www.kinopoisk.ru/film/22803/',
+    'Научный': 'https://www.kinopoisk.ru/film/652833/',
+    'Криминал': 'https://www.kinopoisk.ru/film/278522/',
+    'Ужасы': 'https://www.kinopoisk.ru/film/686898/',
+    'Фантастика': 'https://www.kinopoisk.ru/film/538225',
+    'Триллер': 'https://www.kinopoisk.ru/film/572461/',
+    'Документальный': 'https://www.kinopoisk.ru/film/424378/',
+}
+
+
 @bot.callback_query_handler(func=lambda call: True)
 def query_handler(call):
     bot.answer_callback_query(callback_query_id=call.id, text='Хороший выбор!')
     sad = 'Очень жаль'
-    if call.data == 'Аниме':
-        answer = 'https://jut.su/jojo-bizarre-adventure/season-1/episode-1.html'
+    if call.data in cinema:
+        answer = cinema[call.data]
         bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Комедия':
-        answer = 'https://www.kinopoisk.ru/film/535341/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Боевик':
-        answer = 'https://www.kinopoisk.ru/film/1009536/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Детектив':
-        answer = 'https://www.kinopoisk.ru/film/467099/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Мультфильм':
-        answer = 'https://www.kinopoisk.ru/film/81621/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Драма':
-        answer = 'https://www.kinopoisk.ru/film/220541/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Мелодрама':
-        answer = 'https://www.kinopoisk.ru/film/22803/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Научный':
-        answer = 'https://www.kinopoisk.ru/film/652833/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Криминал':
-        answer = 'https://www.kinopoisk.ru/film/278522/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Ужасы':
-        answer = 'https://www.kinopoisk.ru/film/686898/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Фантастика':
-        answer = 'https://www.kinopoisk.ru/film/538225'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Триллер':
-        answer = 'https://www.kinopoisk.ru/film/572461/'
-        bot.send_message(call.message.chat.id, answer)
-    elif call.data == 'Документальный':
-        answer = 'https://www.kinopoisk.ru/film/424378/'
-        bot.send_message(call.message.chat.id, answer)
+
     else:
         bot.send_message(call.message.chat.id, sad, reply_markup=keyboard3)
 
