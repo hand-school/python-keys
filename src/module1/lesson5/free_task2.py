@@ -6,3 +6,25 @@
 #
 # Программа должна вывести на экран множество, в котором записаны совпавшие интересы.
 # Если совпадений нет, программа должна вывести строку ‘Нет общих интересов’.
+_case = True
+while _case != False:
+    n = int(input("Размер 1 множества: "))
+    m = int(input("Размер 2 множества: "))
+    user1 = set()
+    user2 = set()
+    same = set()
+    for i in range(n):
+        interest = input("Введите интерес 1 пользователя: ")
+        user1.add(interest)
+    print(user1)
+    for i in range(m):
+        interest = input("Введите интерес 2 пользователя: ")
+        user2.add(interest)
+    print(user2)
+    same = set.intersection(user1, user2)
+    print("Одинаковые: ", same)
+
+    _case = input("Вы хотите выйти? ")
+    if _case == "Да" or _case == "да":
+        _case = False
+

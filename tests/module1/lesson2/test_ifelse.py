@@ -38,6 +38,7 @@ class TestTasks(unittest.TestCase):
         self.assertEqual("111 лет", age_description(111))
         self.assertEqual("199 лет", age_description(199))
 
+
     def test_maximum(self):
         self.assertEqual(10, maximum(10, 3, 4)[0])
         self.assertEqual(1, maximum(1, 1, 1)[0])
@@ -50,7 +51,10 @@ class TestTasks(unittest.TestCase):
         self.assertEqual(0, triangle_kind(1.0, 1.5, 1.5))
 
     def test_multi_div(self):
-        pass
+        self.assertEqual(2, multi_div(10, 5, "div"))
+        self.assertEqual(10, multi_div(2, 5, "multi"))
+        self.assertEqual(50, multi_div(10, 5, "text"))
+        self.assertEqual("Error", multi_div(10, 0, "div"))
 
     def test_can_move(self):
         self.assertEqual(True, can_move(1, 1, 1, 8))

@@ -8,7 +8,11 @@ def is_digit(value):
 # TODO: проверить, явялется ли пароль верным
 # Пароль: simple123456
 def is_password_valid(value):
-    pass
+    if value == "simple123456":
+        return True
+    else:
+        return False
+
 
 
 # Trivial
@@ -19,7 +23,12 @@ def is_password_valid(value):
 # если введен верный логин, но неверный пароль - вывести "Неверный пароль"
 # если все введено вверно - вывести "Успешный вход"
 def sign_in(login, password):
-    pass
+    if login == "login123" and password == "simple123456":
+        return "Успешный вход"
+    elif login != "login123":
+        return "Логин неверный"
+    else:
+        return "Неверный пароль"
 
 
 # Trivial
@@ -28,7 +37,14 @@ def sign_in(login, password):
 # TODO: вернуть 3, если дробное число
 # TODO: вернуть 4, если bool
 def check_type(value):
-    pass
+    if type(value) == str:
+        return 1
+    elif type(value) == int:
+        return 2
+    elif type(value) == float:
+        return 3
+    else:
+        return 4
 
 
 # Trivial
@@ -38,14 +54,29 @@ def check_type(value):
 # Если равны - 0,
 # Если второе больше первого - -1
 def compare(a, b):
-    pass
+   if a > b:
+       return 1
+   elif a == b:
+       return 0
+   else:
+       return -1
 
 
 # Easy
 # Мой возраст. Для заданного 0 < n < 200, рассматриваемого каквозраст человека,
 # TODO: Вернуть строку вида: «21 год», «32 года», «12 лет».
 def age_description(n):
-    pass
+    oper = n % 10
+    if (n - oper == 10 or n - oper == 110):
+        return (str(n)+" лет")
+    elif oper == 1:
+        return (str(n)+" год")
+    elif oper == 0:
+        return (str(n)+" лет")
+    elif oper <= 4:
+        return (str(n)+" года")
+    else:
+        return (str(n) + " лет")
 
 
 # Easy
@@ -53,7 +84,12 @@ def age_description(n):
 # TODO: Вывести через запятую сначала наибольшее число, затем два оставшихся
 # К примеру: return 5, 6, 7
 def maximum(a, b, c):
-    pass
+    if a >= b and a >= c:
+        return (a, b, c)
+    elif b >= a and b >= c:
+        return (b, a, c)
+    else:
+        return (c, a, b)
 
 
 # Easy
@@ -62,7 +98,14 @@ def maximum(a, b, c):
 # TODO: прямоугольным(вернуть 1) или тупоугольным(вернуть 2).
 # Если такой треугольник не существует, вернуть - 1.
 def triangle_kind(a, b, c):
-    pass
+    if a + b <= c or a + c <= b or c + b <= a:
+        return -1
+    elif (a*a + b*b < c*c) or (a*a + c*c < b*b) or (b*b + c*c < a*a):
+        return 2
+    elif a*a+b*b == c*c or a*a+c*c == b*b or c*c+b*b == a*a:
+        return 1
+    else:
+        return 0
 
 
 # Easy
@@ -72,7 +115,13 @@ def triangle_kind(a, b, c):
 # при попытке деления на 0 выводится ошибка.
 # ТЕСТЫ НАПИСАТЬ САМОСТОЯТЕЛЬНО
 def multi_div(a, b, kind):
-    pass
+    if kind == "div":
+        if b != 0:
+            return a/b
+        else:
+            return "Error"
+    elif kind == "multi" or kind != "div":
+        return a*b
 
 
 # Medium
@@ -85,7 +134,11 @@ def multi_div(a, b, kind):
 # если из первой клетки ходом ладьи можно попасть во вторую,
 # иначе — False.
 def can_move(start_x, start_y, end_x, end_y):
-    pass
+
+    if start_x - end_x == 0 or start_y - end_y == 0:
+        return (True)
+    else:
+        return (False)
 
 
 # Medium
@@ -94,7 +147,7 @@ def can_move(start_x, start_y, end_x, end_y):
 # вторые — координаты второй клетки (гарантируется, что клетки не совпадают).
 # Программа должна вернуть True, если выбранные клетки одинакового цвета, иначе — False.
 def table_colors(point1_x, point1_y, point2_x, point2_y):
-    point1_color = True
-    point2_color = False
-    if point1_color == point2_color:
-        print()
+    if point1_x == point2_x - 1 or point1_y == point2_y - 1:
+        return (True)
+    else:
+        return (False)
