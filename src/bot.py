@@ -1,8 +1,11 @@
 import telebot
+from telebot import apihelper
 import config
 import sticker
 
+
 bot = telebot.TeleBot(config.token)
+apihelper.proxy = {'http':config.proxy}
 START = 'start'
 HELP = 'help'
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
@@ -20,7 +23,7 @@ def send_help(message):
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.send_message(message.chat.id, f'Вас привествует КиноджоБот', reply_markup=keyboard1)
+    bot.send_message(message.chat.id, f'Вас приветствует КиноджоБот', reply_markup=keyboard1)
 
 
 @bot.message_handler(content_types=['text'])

@@ -8,3 +8,11 @@ Telegram бот, который поможет вам найти фильмы п
 Что умеет 
 Ищет фильмы по жанру
 Предлагает ссылку, где можно посмотреть его
+
+
+# url = 'https://www.ivi.ru/movies/comedy'
+# response = requests.get(url)
+# r = requests.get(url)
+# html = BeautifulSoup(r.content, 'html.parser')
+# for el in html.select('#gallery__item gallery__item_virtual'):
+#     t_min = el.select('.nbl-poster__image')[0].photo

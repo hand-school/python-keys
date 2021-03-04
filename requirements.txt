@@ -1,3 +1,6 @@
 pyTelegramBotApi
 requests
 beautifulSoup4
+kinopoiskpy
+lxml
+KP
