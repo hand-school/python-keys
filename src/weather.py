@@ -62,6 +62,16 @@ def city_weather(message):
         bot.send_message(chatid, f"Произошла ошибка {e}. Город " + city_name + " не найден")
 
     count = 0 #Счетчик для дней
+    day_dict = {
+        0: "Сегодня",
+        1: "Завтра",
+        2: "Послезавтра",
+        3: "Через 2 дня",
+        4: "Через 3 дня",
+        5: "Через 4 дня",
+        6: "Через 5 дней",
+        7: "Через 6 дней"
+    }
     try:
         res = requests.get("http://api.openweathermap.org/data/2.5/onecall",
                            params={'lat': lat, 'lon': lon, 'units': 'metric',
@@ -69,7 +79,7 @@ def city_weather(message):
         data = res.json()
         print(data)
         for i in data['daily']:
-            bot.send_message(chatid, 'Дата ' + str(datetime.datetime.fromtimestamp(float(i['dt'])))
+            day_dict[i] = bot.send_message(chatid, 'Дата ' + str(datetime.datetime.fromtimestamp(float(i['dt'])))
                              + '\nТемпература макс ' + str(float(i['temp']['max']))
                              + '\nТемпература мин ' + str(float(i['temp']['min']))
                              + '\nСкорость ветра: ' + str(float(i['wind_speed'])) + ' м/с'
@@ -78,16 +88,17 @@ def city_weather(message):
         bot.send_message(chatid, "Exception (forecast):", e)
 
     if city_name == ' ':
-        markup = telebot.types.InlineKeyboardMarkup()
-        markup.add(telebot.types.InlineKeyboardButton(text='Сегодня', callback_data='Сегодня'))
-        markup.add(telebot.types.InlineKeyboardButton(text='Завтра', callback_data='Завтра'))
-        markup.add(telebot.types.InlineKeyboardButton(text='Через день', callback_data=''))
-        markup.add(telebot.types.InlineKeyboardButton(text='Через два дня', callback_data=''))
-        markup.add(telebot.types.InlineKeyboardButton(text='Через 3 дня', callback_data=''))
-        markup.add(telebot.types.InlineKeyboardButton(text='Через 4 дня', callback_data=''))
-        markup.add(telebot.types.InlineKeyboardButton(text='Через 5 дней', callback_data=''))
-        markup.add(telebot.types.InlineKeyboardButton(text='Через 6 дней', callback_data=''))
-        bot.send_message(chatid, text="Какой день вас интересует?", reply_markup=markup)
+        if telebot.types.InlineKeyboardButton.text in day_dict:
+            markup = telebot.types.InlineKeyboardMarkup()
+            markup.add(telebot.types.InlineKeyboardButton(text=0, callback_data='Сегодня'))
+            markup.add(telebot.types.InlineKeyboardButton(text=1, callback_data='Завтра'))
+            markup.add(telebot.types.InlineKeyboardButton(text=2, callback_data=''))
+            markup.add(telebot.types.InlineKeyboardButton(text=3, callback_data=''))
+            markup.add(telebot.types.InlineKeyboardButton(text=4, callback_data=''))
+            markup.add(telebot.types.InlineKeyboardButton(text=5, callback_data=''))
+            markup.add(telebot.types.InlineKeyboardButton(text=6, callback_data=''))
+            markup.add(telebot.types.InlineKeyboardButton(text=7, callback_data=''))
+            bot.send_message(chatid, text="Какой день вас интересует?", reply_markup=markup)
 
     @bot.callback_query_handler(func=lambda call: True)
     def query_handler(call):
