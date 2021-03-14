@@ -62,10 +62,10 @@
 # print(l4)
 # print(l5)
 
+# l1 = [1, 2, 3, 4, 5, 6]
 # print(l1[3])
 # print(l1[1:6])
 # print(l1[0:6:2])
-
 # print(len(l1))
 
 # list_to_str_1 = "".join(l2)
