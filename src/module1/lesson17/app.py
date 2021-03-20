@@ -83,16 +83,16 @@ def create_task():
 @app.route('/todo/api/v1.0/tasks/<int:task_id>', methods=['PUT'])
 def update_task(task_id):
     task = list(filter(lambda t: t['id'] == task_id, tasks))
-    if len(task) == 0:
-        abort(404)
+    # if len(task) == 0:
+    #     abort(404)
     if not request.form:
         abort(400)
-    if 'title' in request.form:
+    if 'title' not in request.form:
         abort(400)
-    if 'description' in request.form:
+    if 'description' not in request.form:
         abort(400)
-    if 'done' in request.form and type(request.form.get('done')) is not bool:
-        abort(400)
+    # if 'done' not in request.form or type(request.form.get('done')) is not bool:
+    #     abort(400)
     task[0]['title'] = request.form.get('title', task[0]['title'])
     task[0]['description'] = request.form.get('description', task[0]['description'])
     task[0]['done'] = request.form.get('done', task[0]['done'])
