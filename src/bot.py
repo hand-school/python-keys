@@ -5,7 +5,7 @@ import sticker
 from src.kinopoisk import get_cinema
 
 bot = telebot.TeleBot(config.token)
-apihelper.proxy = {'http':config.proxy}
+apihelper.proxy = {'http': config.proxy}
 START = 'start'
 HELP = 'help'
 keyboard1 = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
