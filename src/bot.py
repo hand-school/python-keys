@@ -2,7 +2,7 @@ import telebot
 from telebot import apihelper
 import config
 import sticker
-
+from src.kinopoisk import get_cinema
 
 bot = telebot.TeleBot(config.token)
 apihelper.proxy = {'http':config.proxy}
@@ -80,7 +80,7 @@ def query_handler(call):
     bot.answer_callback_query(callback_query_id=call.id, text='Хороший выбор!')
     sad = 'Очень жаль'
     if call.data in cinema:
-        answer = cinema[call.data]
+        answer = get_cinema(call.data)
         bot.send_message(call.message.chat.id, answer)
 
     else:
