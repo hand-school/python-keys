@@ -1,4 +1,4 @@
-import  telebot
+import telebot
 from telebot import apihelper
 import config
 import sticker
