@@ -4,7 +4,6 @@ import config
 import sticker
 from kinopoisk import get_cinema
 
-
 bot = telebot.TeleBot(config.token)
 apihelper.proxy = {'http': config.proxy}
 START = 'start'
