@@ -1,8 +1,9 @@
-import  telebot
+import telebot
 from telebot import apihelper
 import config
 import sticker
-from src.kinopoisk import get_cinema
+from kinopoisk import get_cinema
+
 
 bot = telebot.TeleBot(config.token)
 apihelper.proxy = {'http': config.proxy}
